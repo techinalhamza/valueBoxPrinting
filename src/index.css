@@ -9,6 +9,7 @@
 }
 :root {
   --blue: #008cffd9;
+  --btnblue: #168ae9;
   --yellow: #f0a220;
 }
 body,
@@ -32,7 +33,7 @@ input::placeholder {
 .slick-arrow {
   position: absolute !important;
   right: 0 !important;
-  top: -39% !important;
+  top: -15% !important;
 }
 
 .slick-prev {

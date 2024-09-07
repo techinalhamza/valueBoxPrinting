@@ -4,7 +4,7 @@ import firstSlide from "/firstSlider_.jpg";
 import sliderText from "/sliderText.png";
 import star from "/star.svg";
 import { Button } from "@mui/material";
-import { FaArrowRight } from "react-icons/fa";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 function HeroSlider() {
   var settings = {
@@ -62,6 +62,7 @@ function HeroSlider() {
                 <p className="text-xs text-end text-white tracking-[1px]">
                   Explore,design and order enviromentally conscious packaging
                 </p>
+                {/* <img src={rightAngle} alt="" /> */}
                 <div className="flex justify-end">
                   <Button
                     style={{
@@ -69,8 +70,10 @@ function HeroSlider() {
                       color: "#fff",
                       padding: "10px 20px",
                       marginTop: "1rem",
+                      fontFamily: "buttons",
+                      fontWeight: "bold",
                     }}
-                    endIcon={<FaArrowRight />}
+                    endIcon={<MdOutlineKeyboardArrowRight />}
                   >
                     Request a Quote
                   </Button>

@@ -18,11 +18,13 @@ export default {
     fontFamily: {
       custom: ['"Font One"', '"Font Two"', "sans-serif"],
       heading: ['"Gloock"', "serif"],
+      buttons: ['"Inter"', "serif"],
     },
 
     extend: {
       colors: {
         Blue: "var(--blue)",
+        Button: "var(--btnblue)",
         Yellow: "var(--yellow)",
       },
     },

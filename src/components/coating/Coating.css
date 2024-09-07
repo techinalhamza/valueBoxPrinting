@@ -1,0 +1,12 @@
+.coating-container .nav-links li {
+  /* background: var(--blue); */
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.coating-container  .nav-links li:nth-child(1) {
+  color: #000;
+  /* text-decoration: underline; */
+}

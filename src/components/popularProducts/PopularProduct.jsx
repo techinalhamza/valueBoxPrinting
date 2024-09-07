@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import product1 from "/productsImages/Body & Face Lotion Boxes.png";
 import { Button, Rating } from "@mui/material";
 import productdata from "../Products";
-import { FaAngleRight } from "react-icons/fa";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import star from "/star.svg";
 
 function PopularProduct() {
   const [products, setProducts] = useState(productdata);
@@ -11,9 +12,9 @@ function PopularProduct() {
 
   return (
     <>
-      <div className="product-contaoner my-16">
+      <div className="product-contaoner my- bg-[#fef8ed]">
         <div className="main-container">
-          <div className="product-title-bar flex justify-between items-center shadow-xl px-4 py-6">
+          <div className="product-title-bar bg-white flex justify-between items-center shadow-xl px-4 py-6">
             <h1 className="text-3xl font-heading font-normal ">
               Popular Print Products
               {/* <i className=" text-Yellow"> Products</i> */}
@@ -34,11 +35,11 @@ function PopularProduct() {
                 <Link>
                   <Button
                     style={{
-                      background: "var(--blue)",
+                      background: "var(--btnblue)",
                       color: "#fff",
                       padding: "10px 20px",
                     }}
-                    endIcon={<FaAngleRight />}
+                    endIcon={<MdOutlineKeyboardArrowRight />}
                   >
                     {" "}
                     Show All Products
@@ -59,7 +60,7 @@ function PopularProduct() {
             </Button> */}
           </div>
           <div
-            className="all-product-container mt-12"
+            className="all-product-container mt-8 pb-8"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
@@ -70,12 +71,12 @@ function PopularProduct() {
               console.log(val.name);
               return (
                 <>
-                  <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between p-4">
-                    <div className="product-image-bx w-full border-[14px] border-[#f5f5f5] rounded-lg">
+                  <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
+                    <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
                       <img
                         src={val.img}
                         alt=""
-                        className="m-auto bg-[#f5f5f5]"
+                        className="m-auto bg-[#94C9F5]"
                       />
                     </div>
                     <div className="product-info ">
