@@ -13,10 +13,10 @@ function PopularProduct() {
     <>
       <div className="product-contaoner my-16">
         <div className="main-container">
-          <div className="product-title-bar flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-Blue">
-              Popular Print
-              <i className=" text-Yellow"> Products</i>
+          <div className="product-title-bar flex justify-between items-center shadow-xl px-4 py-6">
+            <h1 className="text-3xl font-heading font-normal ">
+              Popular Print Products
+              {/* <i className=" text-Yellow"> Products</i> */}
             </h1>
             <ul className="flex items-center gap-4">
               <li className="text-base font-bold">

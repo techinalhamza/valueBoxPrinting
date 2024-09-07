@@ -15,6 +15,11 @@ export default {
       sm: { max: "786px" },
       // => @media (max-width: 639px) { ... }
     },
+    fontFamily: {
+      custom: ['"Font One"', '"Font Two"', "sans-serif"],
+      heading: ['"Gloock"', "serif"],
+    },
+
     extend: {
       colors: {
         Blue: "var(--blue)",
