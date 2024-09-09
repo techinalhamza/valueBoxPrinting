@@ -74,6 +74,11 @@ input::placeholder {
   .slick-next {
     right: 3% !important;
   }
+  .slick-dots li button::before {
+    font-size: 10px;
+
+    /* Adjust the size as needed */
+  }
 }
 
 header {

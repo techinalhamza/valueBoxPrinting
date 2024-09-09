@@ -45,26 +45,27 @@ function ChooseUs() {
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
                 <img src={customMaterial} alt="" className="w-24" />
-                <h1 className="font-bold uppercase">Custome Size</h1>
+                <h1 className="font-bold uppercase">CUSTOM MATERIALS</h1>
                 <p className="text-xs font-normal ">
-                  Take Control And Customize The Size You Need For Your Apparel
-                  Packaging To Improve Waste Management For Your Brand.
+                  Need A Specific Material To Communicate Your Look And Feel?
+                  Enjoy The Luxury Of Accessing Our Extensive Library Of
+                  Materials.
                 </p>
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
                 <img src={customPrint} alt="" className="w-24" />
-                <h1 className="font-bold uppercase">Custome Size</h1>
+                <h1 className="font-bold uppercase">CUSTOM PRINT</h1>
                 <p className="text-xs font-normal ">
-                  Take Control And Customize The Size You Need For Your Apparel
-                  Packaging To Improve Waste Management For Your Brand.
+                  Choose The Ideal Printing Method For Your Beauty Packaging And
+                  Take Advantage Of The Exterior And Interior Of Your Box.
                 </p>
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
                 <img src={customFinish} alt="" className="w-24" />
-                <h1 className="font-bold uppercase">Custome Size</h1>
+                <h1 className="font-bold uppercase">CUSTOM FINISHES</h1>
                 <p className="text-xs font-normal ">
-                  Take Control And Customize The Size You Need For Your Apparel
-                  Packaging To Improve Waste Management For Your Brand.
+                  Embellish Your Clothing Box With Special Finishes To Create A
+                  Unique Experience That Sets You And Your Competitors Apart.
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ function HeroSlider() {
     slidesToScroll: 1,
     arrows: false,
     // centerMode: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     fade: true,
     adaptiveHeight: true,
@@ -26,7 +26,7 @@ function HeroSlider() {
   return (
     <>
       <Slider {...settings}>
-        <div className="w-full h-[80vh]">
+        <div className="w-full h-[80vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
@@ -86,7 +86,7 @@ function HeroSlider() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[80vh]">
+        <div className="w-full h-[80vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
@@ -149,7 +149,7 @@ function HeroSlider() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[80vh]">
+        <div className="w-full h-[80vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
