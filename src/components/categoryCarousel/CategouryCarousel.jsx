@@ -6,22 +6,47 @@ import catImg3 from "/category/soap boxes.jpg";
 import catImg4 from "/category/wendow boxes.jpg";
 import catImg5 from "/category/popup-display-boxes.jpg";
 import catImg6 from "/category/body fusion.jpg";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import { Button } from "@mui/material";
-import { FaAngleRight } from "react-icons/fa";
 
 function CategouryCarousel() {
   var settings = {
     dots: false, // Hide dots for navigation
     infinite: true, // Enable infinite looping
     speed: 500, // Animation speed
-    slidesToShow: 5, // Number of slides to show at a time
+    slidesToShow: 5, // Number of slides to show at a time (default)
     slidesToScroll: 1, // Number of slides to scroll at a time
     arrows: true, // Show navigation arrows
-    autoplay: true, // Enable autoplay
+    autoplay: false, // Enable autoplay
     autoplaySpeed: 1500, // Autoplay speed
-    mobileFirst: true,
+    mobileFirst: true, // Prioritize mobile settings first
+    responsive: [
+      {
+        breakpoint: 1400, // For screens smaller than 1400px
+        settings: {
+          slidesToShow: 4, // Show 4 slides
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200, // For screens smaller than 1200px
+        settings: {
+          slidesToShow: 3, // Show 3 slides
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 560, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 2, // Show 1 slide
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
     <>
       <div className="cat-container mb-20  bg-[#fef8ed]">
@@ -34,11 +59,16 @@ function CategouryCarousel() {
               style={{
                 background: "var(--btnblue)",
                 color: "#fff",
-                padding: "6px 20px",
+                padding: "10px 20px",
+                textWrap: "nowrap",
+                fontSize: window.innerWidth > 600 ? "16px" : "10px",
               }}
-              endIcon={<FaAngleRight />}
+              endIcon={
+                window.innerWidth > 600 ? <MdOutlineKeyboardArrowRight /> : null
+              }
             >
-              See All Shop
+              {" "}
+              Shop All
             </Button>
           </div>
           <Slider {...settings}>
