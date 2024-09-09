@@ -31,7 +31,7 @@ function Header() {
   return (
     <>
       <header className=" ">
-        <div className="main-container flex items-center justify-between py-4 px-4">
+        <div className="main-container flex items-center justify-between py-2 px-4">
           <div className="logo w-[20%}">
             <img src={logo} alt="" className="w-44" />
           </div>
