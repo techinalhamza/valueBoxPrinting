@@ -2,7 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import firstSlide from "/firstSlider_.jpg";
 import secSlide from "/secSlider.png";
+import secSlide__ from "/secSlider__.png.jpg";
 import thirdSlide from "/thirdSlider.png";
+import thirdSlide__ from "/thirdSlider__.jpg";
 import sliderText from "/sliderText.png";
 import star from "/star.svg";
 import { Button } from "@mui/material";
@@ -90,7 +92,10 @@ function HeroSlider() {
               width: "100%",
               height: "100%",
               // background: "#ccc  ",
-              backgroundImage: `url(${secSlide})`, // Corrected here
+              backgroundImage:
+                window.innerWidth > 600
+                  ? `url(${secSlide})`
+                  : `url(${secSlide__})`, // Corrected here
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -150,7 +155,10 @@ function HeroSlider() {
               width: "100%",
               height: "100%",
               // background: "#ccc  ",
-              backgroundImage: `url(${thirdSlide})`, // Corrected here
+              backgroundImage:
+                window.innerWidth > 600
+                  ? `url(${thirdSlide})`
+                  : `url(${thirdSlide__})`, // Corrected here
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",

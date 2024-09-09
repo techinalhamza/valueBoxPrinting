@@ -13,11 +13,11 @@ function ChooseUs() {
       >
         <div className="main-container ">
           <div className="choose-content sm:px-4">
-            <div className="choose-top text-center text-white">
-              <p>OPTIONS AND MATERIALS</p>
+            <div className="choose-top text-center sm:text-left text-white">
+              <p className="sm:text-xs">OPTIONS AND MATERIALS</p>
               <div className="flex items-center justify-center gap-3">
                 <img src={star} alt="" className="w-8 sm:hidden" />
-                <h1 className="text-4xl sm:text-xl font-heading uppercase tracking-wide my-6">
+                <h1 className="text-4xl sm:text-[2rem] font-heading uppercase tracking-wide my-6">
                   build your <span className="text-Yellow"> cosmetics </span>
                   boxes any way you want
                 </h1>
