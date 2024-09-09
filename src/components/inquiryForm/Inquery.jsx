@@ -31,14 +31,14 @@ function Inquery() {
                     className="block  text-white text-[12px] font- mb-2"
                     htmlFor="length"
                   >
-                    Length (inch)*
+                    Length Per Inch
                   </label>
                   <input
                     id="length"
                     name="length"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Length"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; 12.5in"
                     required
                   />
                 </div>
@@ -47,14 +47,14 @@ function Inquery() {
                     className="block  text-white text-[12px] font- mb-2"
                     htmlFor="width"
                   >
-                    Width (inch)*
+                    Width Per Inch
                   </label>
                   <input
                     id="width"
                     name="width"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Width"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; 5.5in"
                     required
                   />
                 </div>
@@ -63,14 +63,14 @@ function Inquery() {
                     className="block  text-white text-[12px] font- mb-2"
                     htmlFor="height"
                   >
-                    Height (inch)*
+                    Hight Per Inch
                   </label>
                   <input
                     id="height"
                     name="height"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Height"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; 8.5in"
                     required
                   />
                 </div>
@@ -89,7 +89,7 @@ function Inquery() {
                     id="stockOption"
                     name="stockOption"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                     // placeholder="Stock Option"
                   />
                 </div>
@@ -104,7 +104,7 @@ function Inquery() {
                     id="printOption"
                     name="printOption"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                     // placeholder="Print Option"
                   />
                 </div>
@@ -119,7 +119,7 @@ function Inquery() {
                     id="finishingOption"
                     name="finishingOption"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                     // placeholder="Finishing Option"
                   />
                 </div>
@@ -138,8 +138,8 @@ function Inquery() {
                     id="quantity"
                     name="quantity"
                     type="number"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Quantity"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; 50"
                     required
                   />
                 </div>
@@ -154,8 +154,8 @@ function Inquery() {
                     id="fullName"
                     name="fullName"
                     type="text"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Full Name"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; Jewl Howland"
                   />
                 </div>
                 <div className="w-1/3 px-2 mb-4">
@@ -169,8 +169,8 @@ function Inquery() {
                     id="email"
                     name="email"
                     type="email"
-                    className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // placeholder="Email Address"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="example; abcd@gmail.com"
                     required
                   />
                 </div>
@@ -182,14 +182,14 @@ function Inquery() {
                   className="block  text-white text-[12px] font- mb-2"
                   htmlFor="jobDetails"
                 >
-                  Job Details
+                  Details
                 </label>
                 <textarea
                   id="jobDetails"
                   name="jobDetails"
-                  rows="10"
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  // placeholder="Job Details"
+                  rows="8"
+                  className="w-full px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Type Your Needs Here"
                 ></textarea>
               </div>
 
@@ -199,6 +199,7 @@ function Inquery() {
                     background: "#FAC409",
                     color: "#000",
                     padding: "6px 20px",
+                    marginLeft: "auto",
                   }}
                   endIcon={<FaAngleRight />}
                 >

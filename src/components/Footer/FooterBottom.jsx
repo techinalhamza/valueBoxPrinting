@@ -3,7 +3,7 @@ import paymentImg from "/payment.png";
 function FooterBottom() {
   return (
     <>
-      <div className="copy-right-contianer bg-zinc-800">
+      <div className="copy-right-contianer bg-black">
         <div className="main-container">
           <div className="copy-right-content flex justify-between">
             <div className="copy-tagline">

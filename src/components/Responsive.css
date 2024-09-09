@@ -62,6 +62,6 @@
     width: 10rem !important;
   }
   .main-container {
-    padding: 0 10px !important;
+    /* padding: 0 10px !important; */
   }
 }

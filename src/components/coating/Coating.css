@@ -1,4 +1,9 @@
-.coating-container .nav-links li {
+.coating-container .coating-nav-links {
+  width: 100%;
+  overflow: scroll;
+  text-wrap: nowrap;
+}
+.coating-container .coating-nav-links li {
   /* background: var(--blue); */
   padding: 10px 15px;
   margin-right: 10px;
@@ -6,7 +11,7 @@
   color: #fff;
   font-weight: bold;
 }
-.coating-container  .nav-links li:nth-child(1) {
+.coating-container .coating-nav-links li:nth-child(1) {
   color: #000;
   /* text-decoration: underline; */
 }

@@ -14,21 +14,21 @@ function PopularProduct() {
     <>
       <div className="product-contaoner my- bg-[#fef8ed]">
         <div className="main-container">
-          <div className="product-title-bar bg-white flex justify-between items-center shadow-xl px-4 py-6">
+          <div className="product-title-bar bg-white flex justify-between flex-wrap items-center sm:gap-4 shadow-xl px-4 py-6">
             <h1 className="text-3xl font-heading font-normal ">
               Popular Print Products
               {/* <i className=" text-Yellow"> Products</i> */}
             </h1>
             <ul className="flex items-center gap-4">
-              <li className="text-base font-bold">
+              <li className="text-base sm:text-[10px] text-nowrap font-bold">
                 <Link>Best Seller</Link>
               </li>
               <li>|</li>
-              <li className="text-base font-bold text-[#555]">
+              <li className="text-base sm:text-[10px] text-nowrap font-bold text-[#555]">
                 <Link>New Arrival</Link>
               </li>
               <li>|</li>
-              <li className="text-base font-bold text-[#555]">
+              <li className="text-base sm:text-[10px] text-nowrap font-bold text-[#555]">
                 <Link>Top Seller</Link>
               </li>
               <li>
@@ -38,34 +38,29 @@ function PopularProduct() {
                       background: "var(--btnblue)",
                       color: "#fff",
                       padding: "10px 20px",
+                      textWrap: "nowrap",
+                      fontSize: window.innerWidth > 600 ? "16px" : "10px",
                     }}
-                    endIcon={<MdOutlineKeyboardArrowRight />}
+                    endIcon={
+                      window.innerWidth > 600 ? (
+                        <MdOutlineKeyboardArrowRight />
+                      ) : null
+                    }
                   >
                     {" "}
-                    Show All Products
+                    Shop All
                   </Button>
                 </Link>
               </li>
             </ul>
-            {/* <Button
-              style={{
-                background: "#075697",
-                color: "#fff",
-                padding: "10px 20px",
-              }}
-              endIcon={<FaAngleRight />}
-            >
-              {" "}
-              Show All Products
-            </Button> */}
           </div>
           <div
-            className="all-product-container mt-8 pb-8"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
-              gridRowGap: "1rem",
-            }}
+            className="all-product-container mt-8 pb-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4"
+            // style={{
+            //   display: "grid",
+            //   gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
+            //   gridRowGap: "1rem",
+            // }}
           >
             {products.map((val) => {
               console.log(val.name);
@@ -80,7 +75,7 @@ function PopularProduct() {
                       />
                     </div>
                     <div className="product-info ">
-                      <h1 className="product-name font-bold my-4 text-xl">
+                      <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
                         {val.name}
                       </h1>
                       {/* <Rating
@@ -89,12 +84,12 @@ function PopularProduct() {
                         precision={0.5}
                         style={{ fontSize: "18px" }}
                       /> */}
-                      <p className="text-[14px] font-light text-[#555]">
+                      <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
                         {val.desc.length > 80
                           ? val.desc.substr(0, 80) + "..."
                           : val.desc}
                       </p>
-                      <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-4">
+                      <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
                         <Rating
                           readOnly
                           defaultValue={4}
@@ -103,10 +98,11 @@ function PopularProduct() {
                         />
                         <Button
                           style={{
-                            background: "var(--blue)",
+                            background: "var(--btnblue)",
                             color: "#fff",
                             padding: "6px 20px",
                             // width: "100%",
+                            width: window.innerWidth > 560 ? "inherit" : "100%",
                           }}
                         >
                           Buy Now

@@ -24,7 +24,7 @@ function Footer() {
   return (
     <>
       <FooterTop />
-      <div className="footer-container bg-zinc-800  py-16 sm:pt-2">
+      <div className="footer-container bg-black py-16 sm:pt-2">
         <div className="main-container">
           <div className="footer-content ">
             <div className="row footer-data ">

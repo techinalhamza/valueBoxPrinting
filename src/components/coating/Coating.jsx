@@ -12,7 +12,7 @@ function Coating() {
               className="coating-navigation-bar bg-white  shadow-xl px-4 py-6"
               style={{ background: "linear-gradient(#0C4D82,#168AE9)" }}
             >
-              <ul className="nav-links flex items-center justify-center  text-sm">
+              <ul className=" coating-nav-links flex items-center justify-center  text-sm">
                 <li className="bg-white text-black ">COATING & LAMINATIONS</li>
                 <li>PRINTING OPTIONS</li>
                 <li>SPECIAL FINISHES</li>
