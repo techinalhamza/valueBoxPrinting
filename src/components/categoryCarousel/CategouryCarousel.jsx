@@ -52,7 +52,7 @@ function CategouryCarousel() {
       <div className="cat-container mb-20  bg-[#fef8ed]">
         <div className="main-container ">
           <div className="category-title-bar  bg-white flex justify-between items-center shadow-xl px-4 py-6 mb-12">
-            <h1 className="text-3xl font-heading font-normal">
+            <h1 className="text-3xl sm:text-[24px] font-heading font-normal">
               Shop By Category
             </h1>
             <Button

@@ -21,7 +21,7 @@ function PopularProduct() {
       <div className="product-contaoner my- bg-[#fef8ed]">
         <div className="main-container">
           <div className="product-title-bar bg-white flex justify-between flex-wrap items-center sm:gap-4 shadow-xl px-4 py-6">
-            <h1 className="text-3xl font-heading font-normal ">
+            <h1 className="text-3xl sm:text-[24px] font-heading font-normal ">
               Popular Print Products
               {/* <i className=" text-Yellow"> Products</i> */}
             </h1>
