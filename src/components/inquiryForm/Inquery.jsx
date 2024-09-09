@@ -2,19 +2,23 @@ import React from "react";
 import { FaAngleRight } from "react-icons/fa";
 import { Button } from "@mui/material";
 import immidiateBox from "/immidiate box.jpg";
+import immidiateBox_ from "/immidiateBox_.png";
 function Inquery() {
   return (
     <>
       <div
         className="form-container py-12"
         style={{
-          backgroundImage: `url(${immidiateBox})`,
+          backgroundImage:
+            window.innerWidth > 600
+              ? `url(${immidiateBox})`
+              : `url(${immidiateBox_})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="main-container">
-          <div className="form-content w-[45%]">
+          <div className="form-content w-[45%] sm:w-full px-4">
             <h1 className="text-4xl text-white font-heading  tracking-wide mt-6 leading-[3rem]">
               Immediate Box Printing
             </h1>
@@ -132,7 +136,7 @@ function Inquery() {
                     className="block  text-white text-[12px] font- mb-2"
                     htmlFor="quantity"
                   >
-                    Required Quantity*
+                    Req Quantity*
                   </label>
                   <input
                     id="quantity"

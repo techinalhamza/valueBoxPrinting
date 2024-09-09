@@ -1,4 +1,4 @@
-const productdata = [
+const productdat = [
   {
     category: "Cosmetics & Beauty",
     items: [
@@ -6,7 +6,7 @@ const productdata = [
         id: "1",
         name: "Body & Face Lotion Boxes",
         desc: "Body & Face Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Body & Face Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
-        img: "/demo.png",
+        img: "/productsImages/Body & Face Lotion Boxes.png",
         description:
           "Lotions are included in the beauty products and are favored by people of every age. Specially the body lotion gives complete therapy to our body from the environmental harsh, cold, and hot effects. As these are directly related to our skin, they require a supreme level of care and protection. This protection is provided by body lotion boxes. Choosing the right boxes for your products is crucial because it helps attract more clients. They give a cheerful feeling to the viewer or recipient. These boxes not only protect your products from damage and mishandling but also present them in colorful and attractive ways, which can speed up their sales and ratings. Whitening, moisturizing, healing—all kinds of lotions related to body care need proper packaging. Lotion boxes are mostly made with corrugated sheets or cardboard material; however, plastic material can also be used in some cases. Custom body lotion boxes include options for size, style, and thickness based on the product and client specifications. Made with the latest technologies like die-cutting, these boxes are stylish and up-to-date. They are often made fashionable as gifts for special occasions like weddings, parties, and other events, with windows inserted on the front to give a clear view of the inside products. Cardboard material in this category comes in different stock thicknesses, such as 14pt, 16pt, and 18pt, depending on the product's needs. These boxes are used not only for presenting and storing items but also for shipping, which may be domestic or international. To enhance protection during shipping, boxes are made to ship flat, with corrugated sheets inside for additional strength. Body lotion boxes can be printed with patterns like flowers and artistic designs. They can be enhanced with eye-catching graphics and attractive color schemes using Pantone printing systems alongside CMYK combinations, raised ink, and embossed ink printing. Common finishing options include embossing, gloss or matte lamination, varnish, aqueous coating, stamping, hot foiling (gold or silver), and UV spotting, providing additional shine, durability, and strength. We offer various custom printed body and face lotion boxes in different dimensions and designs, focusing on both presentation and protection. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
         tags: "custom printed body and face lotion boxes, cosmetics box printing, size, shape, color, thickness, design",
@@ -29,7 +29,7 @@ const productdata = [
         id: "2",
         name: "Cosmetic Jar Boxes",
         desc: "Cosmetic Jar Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Cosmetic Jar Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
-        img: "/productsImages/Cosmetics & Beauty/Software Boxes.png",
+        img: "https://valueboxprinting.com/images/typeimages/cosmetic-jar-boxes.png",
         popular: "true",
         description:
           "Cosmetic jar boxes are essential for packaging products like creams, lotions, powders, and other cosmetics that come in jar bottles. These boxes keep the jars safe from environmental factors and present the products in a more elegant and professional way. They are designed for high-end products like anti-aging creams, scrubs, beauty creams, and body butter. Cosmetic jar boxes enhance the shelf life and market value of the products by protecting them from direct contact with the environment, ensuring their composition remains intact. These boxes are customizable in size, style, and thickness based on client specifications and product needs. Modern techniques like die-cutting make the boxes stylish and elegant, with various printing and finishing options available to meet aesthetic and protective needs. Options include gloss or matte lamination, embossing, hot foiling, and UV spotting. They can also be used as gift packaging, adding a touch of luxury to the product presentation. Reliable companies offer printed boxes with colorful patterns, graphics, and custom designs that match client requirements. We provide customized cosmetic jar boxes with artwork tailored to your size requirements, quick delivery, and free graphic design services with unlimited revisions. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
@@ -54,8 +54,7 @@ const productdata = [
         id: "3",
         name: "Cosmetic Lip/Eyeliner Boxes",
         desc: "Cosmetic Lip/Eyeliner Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Cosmetic Lip/Eyeliner Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
-        // img: "/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png",
-        img: "/demo.png",
+        img: "/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png",
         popular: "true",
         description:
           "Cosmetic Lip/Eyeliner Boxes are essential for enhancing the presentation and protection of eyeliners, which come in various forms such as gel, powder, and liquid. These boxes maintain the quality of the product, protect it from environmental factors, and serve as a brand insignia that attracts customers. Available in a variety of sizes, styles, and thicknesses, they are tailored to meet product specifications and client needs. Customization options include die-cut designs, eye-catching graphics, and multiple printing techniques such as CMYK, Pantone combinations, and special ink systems. Modern finishing options like lamination, embossing, and UV spotting add elegance without significantly raising costs. The creative designs of these boxes make them an effective cosmetic marketing tool, helping to differentiate brands in a crowded market. Options like windows in the packaging further enhance visibility and appeal. We provide personalized designs tailored to your brand, ensuring that every aspect—from material quality to design aesthetics—meets your standards. For any inquiries, contact us at Sales@ValueBoxPrinting.com, and our designer will promptly respond with a design layout.",
@@ -165,7 +164,16 @@ const productdata = [
           },
         ],
       },
-      {
+     
+    ],
+  },
+];
+
+
+
+
+
+ {
         id: "8",
         name: "Lotion Boxes",
         desc: "Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
@@ -300,8 +308,15 @@ const productdata = [
           },
         ],
       },
-    ],
-  },
-];
-
-export default productdata;
+      {
+        id: "3",
+        name: "",
+        desc: "",
+        img: "",
+      },
+      {
+        id: "3",
+        name: "",
+        desc: "",
+        img: "",
+      },

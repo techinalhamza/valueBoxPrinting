@@ -19,12 +19,12 @@ function OurExperts() {
         }}
       >
         <div className="main-container">
-          <div className="expert-content grid grid-cols-2 place-content-center place-items-center ">
+          <div className="expert-content flex items-center justify-center sm:flex-wrap sm:flex-col-reverse sm:px-4">
             <div className="expert-img">
               <img
                 src={banner}
                 alt=""
-                className="w-full aspect-[4/4] object-contain"
+                className="w-full aspect-[4/4] object-contain sm:hidden"
               />
             </div>
             <div className="expert-info">

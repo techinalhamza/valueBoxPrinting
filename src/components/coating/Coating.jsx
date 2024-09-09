@@ -22,19 +22,15 @@ function Coating() {
                 <li>RIGID MATERIALS</li>
               </ul>
             </div>
-            <div
-              className="coating-cards-container gap-4 py-8"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
-                gridRowGap: "1rem",
-              }}
-            >
+            <div className="coating-cards-container gap-4 py-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -43,8 +39,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -53,8 +52,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -63,8 +65,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -73,8 +78,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -83,8 +91,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -93,8 +104,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>
@@ -103,8 +117,11 @@ function Coating() {
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />
                 <div className="coating-info  p-4">
-                  <h1 className="font-bold mb-2"> AQUEOUS COATING</h1>
-                  <p className="text-xs">
+                  <h1 className="font-bold mb-2 xsm:text-[13px]">
+                    {" "}
+                    AQUEOUS COATING
+                  </h1>
+                  <p className="text-xs xsm:text-[12px]">
                     Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating.
                     Available In Gloss Or Matte Finish.
                   </p>

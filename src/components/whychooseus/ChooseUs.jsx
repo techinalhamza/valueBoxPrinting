@@ -12,7 +12,7 @@ function ChooseUs() {
         style={{ background: "linear-gradient(#0C4D82,#168AE9)" }}
       >
         <div className="main-container ">
-          <div className="choose-content">
+          <div className="choose-content sm:px-4">
             <div className="choose-top text-center text-white">
               <p>OPTIONS AND MATERIALS</p>
               <div className="flex items-center justify-center gap-3">

@@ -8,7 +8,13 @@ import star from "/star.svg";
 
 function PopularProduct() {
   const [products, setProducts] = useState(productdata);
-  // console.log(products);
+
+  // filter popular products
+  const popularItems = products
+    .map((val) => val.items.filter((item) => item.popular === "true"))
+    .flat(); // This flattens the array of arrays
+
+  // console.log(popularItems.map((val) => val.id));
 
   return (
     <>
@@ -62,8 +68,8 @@ function PopularProduct() {
             //   gridRowGap: "1rem",
             // }}
           >
-            {products.map((val) => {
-              console.log(val.name);
+            {popularItems.map((val) => {
+              // console.log(val.name);
               return (
                 <>
                   <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
@@ -78,12 +84,7 @@ function PopularProduct() {
                       <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
                         {val.name}
                       </h1>
-                      {/* <Rating
-                        readOnly
-                        defaultValue={4}
-                        precision={0.5}
-                        style={{ fontSize: "18px" }}
-                      /> */}
+
                       <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
                         {val.desc.length > 80
                           ? val.desc.substr(0, 80) + "..."
@@ -101,13 +102,11 @@ function PopularProduct() {
                             background: "var(--btnblue)",
                             color: "#fff",
                             padding: "6px 20px",
-                            // width: "100%",
                             width: window.innerWidth > 560 ? "inherit" : "100%",
                           }}
                         >
                           Buy Now
                         </Button>
-                        {/* <span>15% discount</span> */}
                       </div>
                     </div>
                   </div>

@@ -39,8 +39,8 @@
 }
 
 .footer-content .footer-data {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */
 }
 
 .links h1 svg {

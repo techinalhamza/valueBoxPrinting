@@ -27,8 +27,8 @@ function Footer() {
       <div className="footer-container bg-black py-16 sm:pt-2">
         <div className="main-container">
           <div className="footer-content ">
-            <div className="row footer-data ">
-              <div className="footer-col mt-4  ">
+            <div className="row footer-data grid grid-cols-5 sm:grid-cols-2 sm:px-4">
+              <div className="footer-col mt-4 sm:col-span-2 ">
                 <div className="img">
                   <img src={logo} alt="" className="w-40" />
                 </div>
