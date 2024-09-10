@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import product1 from "/productsImages/Body & Face Lotion Boxes.png";
 import { Button, Rating } from "@mui/material";
 import productdata from "../Products";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
