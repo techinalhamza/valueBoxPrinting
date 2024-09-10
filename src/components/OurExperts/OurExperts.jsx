@@ -34,7 +34,7 @@ function OurExperts() {
                 </span>{" "}
                 <p className="text-white">#1 Printing Services</p>
               </div>
-              <h1 className="text-4xl text-white font-heading  tracking-wide my-6 leading-[3rem]">
+              <h1 className="text-4xl sm:text-[2rem] text-white font-heading  tracking-wide my-6 leading-[3rem]">
                 Not Sure What You Want ? Our Experts Can Help
               </h1>
               <div
@@ -45,40 +45,38 @@ function OurExperts() {
                   gridRowGap: "1rem",
                 }}
               >
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={customerSupport} alt="" className="w-24" />
-                  <h1 className="font-bold uppercase">Custome Size</h1>
-                  <p className="text-xs font-semibold ">
-                    Take Control And Customize The Size You Need For Your
-                    Apparel Packaging To Improve Waste Management For Your
-                    Brand.
+                  <h1 className="font-bold uppercase">Customer Support</h1>
+                  <p className="text-xs font-normal ">
+                    Provide Outstanding Unlimited Support To Your Packaging
+                    Project
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={customSolution} alt="" className="w-24" />
-                  <h1 className="font-bold uppercase">Custome Size</h1>
-                  <p className="text-xs font-semibold ">
-                    Take Control And Customize The Size You Need For Your
-                    Apparel Packaging To Improve Waste Management For Your
-                    Brand.
+                  <h1 className="font-bold uppercase">End To End Solution</h1>
+                  <p className="text-xs font-normal ">
+                    Get Dedicated Support From Start To Finish And Even Beyond
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={packaging} alt="" className="w-24" />
-                  <h1 className="font-bold uppercase">Custome Size</h1>
-                  <p className="text-xs font-semibold ">
-                    Take Control And Customize The Size You Need For Your
-                    Apparel Packaging To Improve Waste Management For Your
-                    Brand.
+                  <h1 className="font-bold uppercase">
+                    Packaging Without Limits
+                  </h1>
+                  <p className="text-xs font-normal ">
+                    Our Packaging Experts Are Able To Help Turn Your Idea To
+                    Reality.
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={highQuality} alt="" className="w-24" />
-                  <h1 className="font-bold uppercase">Custome Size</h1>
-                  <p className="text-xs font-semibold ">
-                    Take Control And Customize The Size You Need For Your
-                    Apparel Packaging To Improve Waste Management For Your
-                    Brand.
+                  <h1 className="font-bold uppercase">
+                    High Quality Guaranteed
+                  </h1>
+                  <p className="text-xs font-normal ">
+                    Enjoy The Perks Of Our Proactive Cost Saving Solutions
                   </p>
                 </div>
               </div>

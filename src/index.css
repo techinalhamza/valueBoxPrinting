@@ -68,8 +68,16 @@ input::placeholder {
 
 @media (max-width: 786px) {
   .slick-prev {
-    left: 85% !important;
+    left: 83% !important;
     right: 100%;
+  }
+  .slick-next {
+    right: 3% !important;
+  }
+  .slick-dots li button::before {
+    font-size: 10px;
+
+    /* Adjust the size as needed */
   }
 }
 

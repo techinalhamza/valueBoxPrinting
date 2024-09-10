@@ -18,7 +18,7 @@ function CategouryCarousel() {
     slidesToShow: 5, // Number of slides to show at a time (default)
     slidesToScroll: 1, // Number of slides to scroll at a time
     arrows: true, // Show navigation arrows
-    autoplay: false, // Enable autoplay
+    autoplay: true, // Enable autoplay
     autoplaySpeed: 1500, // Autoplay speed
     mobileFirst: true, // Prioritize mobile settings first
     responsive: [
@@ -52,7 +52,7 @@ function CategouryCarousel() {
       <div className="cat-container mb-20  bg-[#fef8ed]">
         <div className="main-container ">
           <div className="category-title-bar  bg-white flex justify-between items-center shadow-xl px-4 py-6 mb-12">
-            <h1 className="text-3xl font-heading font-normal">
+            <h1 className="text-3xl sm:text-[24px] font-heading font-normal">
               Shop By Category
             </h1>
             <Button
