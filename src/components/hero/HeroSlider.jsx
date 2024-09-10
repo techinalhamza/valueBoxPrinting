@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import firstSlide from "/firstSlider_.jpg";
+import firstSlide__ from "/public/mobileFirstSlide.png";
 import secSlide from "/secSlider.png";
 import secSlide__ from "/secSlider__.png.jpg";
 import thirdSlide from "/thirdSlider.png";
@@ -32,7 +33,10 @@ function HeroSlider() {
               width: "100%",
               height: "100%",
               // background: "#ccc  ",
-              backgroundImage: `url(${firstSlide})`, // Corrected here
+              backgroundImage:
+                window.innerWidth > 600
+                  ? `url(${firstSlide})`
+                  : `url(${firstSlide__})`, // Corrected here
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
