@@ -9,19 +9,22 @@ function Coating() {
         <div className="main-container">
           <div className="coating-content">
             <div
-              className="coating-navigation-bar bg-white  shadow-xl px-4 py-6"
+              className="coating-navigation-bar bg-white shadow-xl px-4 py-6"
               style={{ background: "linear-gradient(#0C4D82,#168AE9)" }}
             >
-              <ul className=" coating-nav-links flex items-center justify-center  text-sm">
-                <li className="bg-white text-black ">COATING & LAMINATIONS</li>
-                <li>PRINTING OPTIONS</li>
-                <li>SPECIAL FINISHES</li>
-                <li>PAPERBOARD</li>
-                <li>CORRUGATED</li>
-                <li>FLUTED GRADES</li>
-                <li>RIGID MATERIALS</li>
+              <ul className="coating-nav-links flex items-center justify-start text-sm sm:text-[10px] whitespace-nowrap overflow-x-auto no-scrollbar">
+                <li className="bg-white text-black p-2">
+                  COATING & LAMINATIONS
+                </li>
+                <li className="p-2">PRINTING OPTIONS</li>
+                <li className="p-2">SPECIAL FINISHES</li>
+                <li className="p-2">PAPERBOARD</li>
+                <li className="p-2">CORRUGATED</li>
+                <li className="p-2">FLUTED GRADES</li>
+                <li className="p-2">RIGID MATERIALS</li>
               </ul>
             </div>
+
             <div className="coating-cards-container gap-4 py-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
               <div className="coating-card flex flex-col gap-2  bg-white rounded-2xl  overflow-hidden">
                 <img src={coating1} alt="" />

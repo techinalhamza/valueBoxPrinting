@@ -2,12 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { RiDiscountPercentFill } from "react-icons/ri";
 
-function Navbar() {
+function Navbar({ navOpen }) {
+  console.log({ navOpen });
   return (
     <>
       <nav className="   py-4 mt-24">
         <div className="main-container flex items-center justify-between">
-          <div className="nav-links">
+          <div
+            className={`nav-links ${
+              navOpen ? "active " : "nav-links"
+            }  transition-all duration-500 ease-in-out `}
+          >
             <ul className="flex gap-4 uppercase text-[13px]">
               <li>
                 <NavLink exact="true" to="/products">

@@ -18,7 +18,7 @@ function HeroSlider() {
     slidesToScroll: 1,
     arrows: false,
     // centerMode: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     fade: true,
     adaptiveHeight: true,

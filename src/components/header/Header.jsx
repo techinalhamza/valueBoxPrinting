@@ -5,9 +5,11 @@ import { BiPhoneCall } from "react-icons/bi";
 import { CiUser } from "react-icons/ci";
 import Navbar from "./Navbar";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -66,15 +68,18 @@ function Header() {
                 <p>My Account</p>
               </div>
               {isMobile && (
-                <div className="hamburger-menu">
-                  <RxHamburgerMenu />
+                <div
+                  className="hamburger-menu"
+                  onClick={() => setNavOpen(!navOpen)}
+                >
+                  {navOpen ? <IoClose /> : <RxHamburgerMenu />}
                 </div>
               )}
             </div>
           </div>
         </div>
       </header>
-      <Navbar />
+      <Navbar navOpen={navOpen} />
     </>
   );
 }

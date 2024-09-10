@@ -45,7 +45,7 @@ function OurExperts() {
                   gridRowGap: "1rem",
                 }}
               >
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={customerSupport} alt="" className="w-24" />
                   <h1 className="font-bold uppercase">Customer Support</h1>
                   <p className="text-xs font-normal ">
@@ -53,14 +53,14 @@ function OurExperts() {
                     Project
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={customSolution} alt="" className="w-24" />
                   <h1 className="font-bold uppercase">End To End Solution</h1>
                   <p className="text-xs font-normal ">
                     Get Dedicated Support From Start To Finish And Even Beyond
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={packaging} alt="" className="w-24" />
                   <h1 className="font-bold uppercase">
                     Packaging Without Limits
@@ -70,7 +70,7 @@ function OurExperts() {
                     Reality.
                   </p>
                 </div>
-                <div className="choose-card flex  justify-center flex-col gap-2  bg-white rounded-2xl px-8 py-4">
+                <div className="choose-card flex  justify-center flex-col sm:items-center sm:text-center gap-2  bg-white rounded-2xl px-8 py-4">
                   <img src={highQuality} alt="" className="w-24" />
                   <h1 className="font-bold uppercase">
                     High Quality Guaranteed
