@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-=======
-// import product1 from "/productsImages/Body & Face Lotion Boxes.png";
->>>>>>> 73f55dd9f8534ac1d0a533356d35ff9b6c8401ba
 import { Button, Rating } from "@mui/material";
 import productdata from "../Products";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -75,44 +71,50 @@ function PopularProduct() {
               // console.log(val.name);
               return (
                 <>
-                  <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
-                    <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
-                      <img
-                        src={val.img}
-                        alt=""
-                        className="m-auto bg-[#94C9F5]"
-                      />
-                    </div>
-                    <div className="product-info ">
-                      <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
-                        {val.name}
-                      </h1>
-
-                      <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
-                        {val.desc.length > 80
-                          ? val.desc.substr(0, 80) + "..."
-                          : val.desc}
-                      </p>
-                      <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
-                        <Rating
-                          readOnly
-                          defaultValue={4}
-                          precision={0.5}
-                          style={{ fontSize: "18px" }}
+                  <Link
+                    to={`/singleProduct/${val.name.replace(/\s+/g, "-")}`}
+                    key={val.id}
+                  >
+                    <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
+                      <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
+                        <img
+                          src={val.img}
+                          alt=""
+                          className="m-auto bg-[#94C9F5]"
                         />
-                        <Button
-                          style={{
-                            background: "var(--btnblue)",
-                            color: "#fff",
-                            padding: "6px 20px",
-                            width: window.innerWidth > 560 ? "inherit" : "100%",
-                          }}
-                        >
-                          Buy Now
-                        </Button>
+                      </div>
+                      <div className="product-info ">
+                        <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
+                          {val.name}
+                        </h1>
+
+                        <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
+                          {val.desc.length > 80
+                            ? val.desc.substr(0, 80) + "..."
+                            : val.desc}
+                        </p>
+                        <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
+                          <Rating
+                            readOnly
+                            defaultValue={4}
+                            precision={0.5}
+                            style={{ fontSize: "18px" }}
+                          />
+                          <Button
+                            style={{
+                              background: "var(--btnblue)",
+                              color: "#fff",
+                              padding: "6px 20px",
+                              width:
+                                window.innerWidth > 560 ? "inherit" : "100%",
+                            }}
+                          >
+                            Buy Now
+                          </Button>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               );
             })}

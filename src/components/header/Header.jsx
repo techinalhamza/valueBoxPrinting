@@ -6,6 +6,7 @@ import { CiUser } from "react-icons/ci";
 import Navbar from "./Navbar";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -35,7 +36,10 @@ function Header() {
       <header className=" ">
         <div className="main-container flex items-center justify-between py-2 px-4">
           <div className="logo w-[20%}">
-            <img src={logo} alt="" className="w-44" />
+            <Link to="/">
+              {" "}
+              <img src={logo} alt="" className="w-44" />
+            </Link>
           </div>
           <div className="header-search-bar flex items-center bg-white  border border-gray-200 h-min rounded-full overflow-hidden w-[40%] px-6">
             <div className="search-btn">

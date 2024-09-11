@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SingleProduct.css";
 import product from "/productsImages/Cosmetics & Beauty/Custom Eyelash Boxes.png";
 import { Rating } from "@mui/material";
@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import { FaAngleRight } from "react-icons/fa";
 import productdata from "../../components/Products";
 import Slider from "react-slick";
+import { useParams } from "react-router-dom";
 
 import {
   FaFacebookF,
@@ -20,11 +21,30 @@ import { useState } from "react";
 function SingleProduct() {
   const [showInfo, setShowInfo] = useState(0);
   const [products, setProducts] = useState(productdata);
+  const [selectedProduct, setSelectedProduct] = useState(null); // State to store the filtered product
 
+  const { name } = useParams();
   const popularItems = products
     .map((val) => val.items.filter((item) => item.popular === "true"))
     .flat(); // This flattens the array of arrays
 
+  useEffect(() => {
+    if (!name) return; // If 'name' is not defined, do nothing
+
+    // Filter the product from the products state based on the 'name' param
+    const filteredProduct = products.filter((product) => {
+      console.log("Checking product:", product); // Log each product being checked
+
+      // Ensure product and product.name exist
+      return (
+        product?.name?.replace(/\s+/g, "-").toLowerCase() === name.toLowerCase()
+      );
+    });
+
+    setSelectedProduct(filteredProduct); // Store the filtered product in state
+  }, [name]);
+
+  console.log(selectedProduct);
   var settings = {
     dots: false, // Hide dots for navigation
     infinite: true, // Enable infinite looping
@@ -54,15 +74,13 @@ function SingleProduct() {
         <div className="main-container">
           <div className="product-content flex sm:flex-wrap gap-4 max-h-[35rem] overflow-hidden overflow-y-auto ">
             {/* Image Container */}
-            <div className="product-image w-1/2 sm:w-full max-h-[35rem] shadow-xl sm:static lg:sticky top-0">
+            <div className="product-image w-1/2 sm:w-full max-h-[35rem] shadow-xl sm:static sticky top-0">
               <img src={product} alt="" className="w-full h-auto" />
             </div>
 
             {/* Product Info Container */}
             <div className="prodluct-info w-1/2 sm:w-full ">
-              <div className="product-name text-4xl font-bold">
-                Box By Style
-              </div>
+              <div className="product-name text-4xl font-bold">{name}</div>
               <Rating
                 defaultValue={5}
                 readOnly
@@ -306,7 +324,7 @@ function SingleProduct() {
               </div>
             </div>
           </div>
-          <div className="product-desc-tabs ">
+          <div className="product-desc-tabs my-16">
             <div className="row w-full  border mt-12 py-12">
               <div className="col">
                 <div className="info-tabs flex flex-wrap gap-8 mb-12">
