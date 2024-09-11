@@ -12,15 +12,15 @@ const productdata = [
         tags: "custom printed body and face lotion boxes, cosmetics box printing, size, shape, color, thickness, design",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Body & Face Lotion Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+            specification:
               "Body & Face Lotion Boxes can be customized with client's logos and designs.",
-            Colors:
+            colors:
               "Body & Face Lotion Boxes available in CMYK full color and Pantone color.",
-            "Finishing Options":
+            finishingOptions:
               "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
-            "Production Time":
+            productionTime:
               "Production time is 7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -36,15 +36,15 @@ const productdata = [
         tags: "custom printed cosmetic jar boxes, custom cosmetic boxes, custom cosmetic packaging, custom jar boxes wholesale, custom cosmetic jar boxes, cosmetic jar box printing, custom cosmetic packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Cosmetic Jar Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+            specification:
               "Cosmetic Jar Boxes can be customized with client's logos and designs.",
-            Colors:
+            colors:
               "Cosmetic Jar Boxes available in CMYK full color and Pantone color.",
-            "Finishing Options":
+            finishingOptions:
               "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
-            "Production Time":
+            productionTime:
               "Production time is 7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -62,14 +62,14 @@ const productdata = [
         tags: "cosmetic lip eyeliner boxes, custom cosmetic boxes wholesale, custom cosmetic boxes, cosmetic lip eyeliner packaging boxes, lip eyeliner boxes, cosmetic lip eyeliner boxes wholesale, lip eyeliner cosmetic boxes, custom printed lip eyeliner cosmetic boxes, cheap custom lip eyeliner boxes, custom printed lip eyeliner cosmetic packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Cosmetic Lip/Eyeliner Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+            specification:
               "Cosmetic Lip/Eyeliner Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes are available.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -85,14 +85,14 @@ const productdata = [
         tags: "eyelash boxes, custom eyelash boxes, eyelash packaging boxes wholesale, custom eyelash packaging, eyelash packaging, custom printed eyelash boxes, custom eyelash box printing, custom printed eyelash box packaging, cheap custom eyelash boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Custom Eyelash Boxes available in different shapes, styles, and various sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Custom Eyelash Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -108,14 +108,14 @@ const productdata = [
         tags: "hair extension boxes, custom hair extension packaging, hair extension packaging boxes, custom hair extension boxes, packaging for hair extensions, hair extension printing boxes, hair extension boxes wholesale, custom printed hair extension boxes, custom hair extension, boxes hair extension",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Hair Extension Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Hair Extension Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -130,14 +130,14 @@ const productdata = [
         tags: "lip gloss boxes, custom lip gloss packaging wholesale, lip gloss box, lip gloss packaging boxes, lip gloss printing boxes, lip gloss printed boxes, custom lip gloss boxes, empty lip gloss boxes, custom lip gloss packaging, lip balm tube boxes, custom lip balm display boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Lip Gloss Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Lip Gloss Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -153,14 +153,14 @@ const productdata = [
         tags: "lipstick boxes, custom lipstick boxes, custom printed lipstick boxes, lipstick boxes wholesale, custom lipstick box packaging, lipstick packaging boxes, lipstick printing boxes, standard lipstick box size, blank lipstick boxes, bulk lipstick boxes, lipstick box packaging, lipstick print boxes, lipstick boxes for sale",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Lipstick Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Lipstick Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -176,14 +176,14 @@ const productdata = [
         tags: "lotion boxes, lotion boxes wholesale, custom printed lotion packaging boxes, whitening lotion boxes, baby lotion boxes, lotion gift boxes, custom lotion box, lotion printed boxes, lotion print boxes, lotion packaging boxes, packaging lotion boxes, printed lotion boxes, lotion printing boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Lotion Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Lotion Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -199,14 +199,14 @@ const productdata = [
         tags: "makeup boxes, custom makeup boxes, custom makeup packaging boxes wholesale, custom makeup boxes wholesale, custom printed makeup boxes, printed makeup boxes, cheap custom makeup boxes, custom makeup packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Makeup Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Makeup Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -221,14 +221,14 @@ const productdata = [
         tags: "mascara boxes, custom mascara boxes, mascara packaging boxes, mascara boxes wholesale, mascara box packaging, custom printed mascara boxes, mascara printed boxes, mascara box printing, mascara print boxes, custom mascara packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Mascara Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Mascara Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -244,14 +244,14 @@ const productdata = [
         tags: "perfume boxes, custom printed perfume packaging boxes, custom perfume boxes, perfume boxes for sale, perfume boxes design, perfume boxes wholesale, custom perfume boxes, perfume box suppliers, perfume box manufacturers, perfume packaging design ideas, perfume gift boxes wholesale, perfume boxes packaging, Perfume packaging Boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Perfume Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Perfume Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -266,14 +266,14 @@ const productdata = [
         tags: "product boxes, custom product packaging boxes, custom product boxes, wholesale product boxes, custom printed product boxes, custom product boxes with logo, product packaging boxes with no minimum, custom product boxes wholesale, cheap custom product boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Product Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Product Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -288,14 +288,14 @@ const productdata = [
         tags: "custom printed soap boxes, custom soap boxes wholesale, custom wholesale soap packaging, wholesale soap boxes, handmade soap boxes, kraft soap boxes wholesale, black soap boxes, custom printed soap boxes, cheap custom soap boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            sizeStyles:
               "Soap Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+            specification:
               "Soap Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            finishingOptions:
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            productionTime:
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],

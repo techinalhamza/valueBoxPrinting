@@ -8,3 +8,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.related-products .slick-slide {
+  margin-right: 1rem;
+}

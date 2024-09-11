@@ -6,7 +6,7 @@ function Navbar({ navOpen }) {
   console.log({ navOpen });
   return (
     <>
-      <nav className="   py-4 mt-24">
+      <nav className=" bg-whit border-t mt-[4.4rem]  py-4 ">
         <div className="main-container flex items-center justify-between">
           <div
             className={`nav-links ${
