@@ -20,11 +20,15 @@ function Contact() {
             backgroundImage: `url(${contactBanner})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
-            padding: window.innerWidth > 600 ? "6rem" : " 4rem 0",
+            // padding: window.innerWidth > 600 ? "6rem" : " 4rem 0",
             marginTop: "",
           }}
         >
-          <h1 className="text-7xl sm:text-4xl text-center ">Contact Us</h1>
+          <div className="listing-overlay w-full h-full bg-[#0007] py-24 sm:py-16 ">
+            <h1 className="text-7xl sm:text-4xl text-center text-white ">
+              Contact Us
+            </h1>
+          </div>
         </div>
         <div className="main-container py-16">
           <div className="contact-us-cards-container">

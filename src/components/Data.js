@@ -164,16 +164,7 @@ const productdat = [
           },
         ],
       },
-     
-    ],
-  },
-];
-
-
-
-
-
- {
+      {
         id: "8",
         name: "Lotion Boxes",
         desc: "Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
@@ -308,15 +299,47 @@ const productdat = [
           },
         ],
       },
+    ],
+  },
+  {
+    category: "Retail Packaging Boxes",
+    items: [
       {
-        id: "3",
-        name: "",
-        desc: "",
-        img: "",
+        id: "1",
+        name: "Body & Face Lotion Boxes",
+        desc: "Body & Face Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Body & Face Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
+        img: "/productsImages/Body & Face Lotion Boxes.png",
+        description:
+          "Lotions are included in the beauty products and are favored by people of every age. Specially the body lotion gives complete therapy to our body from the environmental harsh, cold, and hot effects. As these are directly related to our skin, they require a supreme level of care and protection. This protection is provided by body lotion boxes. Choosing the right boxes for your products is crucial because it helps attract more clients. They give a cheerful feeling to the viewer or recipient. These boxes not only protect your products from damage and mishandling but also present them in colorful and attractive ways, which can speed up their sales and ratings. Whitening, moisturizing, healing—all kinds of lotions related to body care need proper packaging. Lotion boxes are mostly made with corrugated sheets or cardboard material; however, plastic material can also be used in some cases. Custom body lotion boxes include options for size, style, and thickness based on the product and client specifications. Made with the latest technologies like die-cutting, these boxes are stylish and up-to-date. They are often made fashionable as gifts for special occasions like weddings, parties, and other events, with windows inserted on the front to give a clear view of the inside products. Cardboard material in this category comes in different stock thicknesses, such as 14pt, 16pt, and 18pt, depending on the product's needs. These boxes are used not only for presenting and storing items but also for shipping, which may be domestic or international. To enhance protection during shipping, boxes are made to ship flat, with corrugated sheets inside for additional strength. Body lotion boxes can be printed with patterns like flowers and artistic designs. They can be enhanced with eye-catching graphics and attractive color schemes using Pantone printing systems alongside CMYK combinations, raised ink, and embossed ink printing. Common finishing options include embossing, gloss or matte lamination, varnish, aqueous coating, stamping, hot foiling (gold or silver), and UV spotting, providing additional shine, durability, and strength. We offer various custom printed body and face lotion boxes in different dimensions and designs, focusing on both presentation and protection. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
+        tags: "custom printed body and face lotion boxes, cosmetics box printing, size, shape, color, thickness, design",
+        moreInfo: [
+          {
+            "Size / Styles":
+              "Body & Face Lotion Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
+            Specification:
+              "Body & Face Lotion Boxes can be customized with client's logos and designs.",
+            Colors:
+              "Body & Face Lotion Boxes available in CMYK full color and Pantone color.",
+            "Finishing Options":
+              "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
+            "Production Time":
+              "Production time is 7 - 10 business working days. Rush delivery is available.",
+          },
+        ],
       },
-      {
-        id: "3",
-        name: "",
-        desc: "",
-        img: "",
-      },
+    ],
+  },
+];
+
+// {
+//   id: "3",
+//   name: "",
+//   desc: "",
+//   img: "",
+// },
+// {
+//   id: "3",
+//   name: "",
+//   desc: "",
+//   img: "",
+// },

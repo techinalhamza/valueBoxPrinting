@@ -44,13 +44,12 @@ function SingleProduct() {
   console.log(selectedProduct.map((val) => val.moreInfo));
   var settings = {
     dots: false,
-    speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    infinite: false,
+    infinite: true,
     responsive: [
       {
         breakpoint: 600,
@@ -72,7 +71,7 @@ function SingleProduct() {
             return (
               <>
                 <div className="product-content flex sm:flex-wrap gap-4 max-h-[35rem] overflow-hidden overflow-y-auto drop-shadow-xl border-t  pt-8">
-                  <div className="product-image w-1/2 sm:w-full max-h-[35rem] shadow-xl sm:static sticky top-0">
+                  <div className="product-image w-1/2 sm:w-full max-h-[35rem] drop-shadow border sm:static sticky top-0">
                     <img src={product.img} alt="" className="w-full h-auto" />
                   </div>
 
@@ -319,8 +318,8 @@ function SingleProduct() {
                     </div>
                   </div>
                 </div>
-                <div className="product-desc-tabs my-16">
-                  <div className="row w-full  border rounded-lg mt-12 py-12">
+                <div className="product-desc-tabs my-16 bg-[#FEF8ED]">
+                  <div className="row w-full  border rounded-lg mt-12 py-12 px-8">
                     <div className="col px-4">
                       <div className="info-tabs flex flex-wrap gap-8 mb-12">
                         <div
