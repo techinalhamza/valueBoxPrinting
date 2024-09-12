@@ -16,27 +16,27 @@ function Navbar({ navOpen }) {
             <ul className="flex gap-4 uppercase text-[13px]">
               <li>
                 <NavLink exact="true" to="/products">
-                  Products
+                  Home
                 </NavLink>
               </li>
               <li>
                 <NavLink exact="true" to="/products">
-                  Quote by style
+                  Shop
                 </NavLink>
               </li>
               <li>
                 <NavLink exact="true" to="/products">
-                  Upload your Art work
+                  About us
                 </NavLink>
               </li>
               <li>
                 <NavLink exact="true" to="/products">
-                  free design services
+                  Blog
                 </NavLink>
               </li>
               <li>
                 <NavLink exact="true" to="/products">
-                  Sample request
+                  Contact us
                 </NavLink>
               </li>
             </ul>

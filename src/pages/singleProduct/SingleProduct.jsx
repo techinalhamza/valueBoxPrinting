@@ -44,14 +44,13 @@ function SingleProduct() {
   console.log(selectedProduct.map((val) => val.moreInfo));
   var settings = {
     dots: false,
-
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    // mobileFirst: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 600,
@@ -72,13 +71,13 @@ function SingleProduct() {
           {selectedProduct.map((product) => {
             return (
               <>
-                <div className="product-content flex sm:flex-wrap gap-4 max-h-[35rem] overflow-hidden overflow-y-auto ">
+                <div className="product-content flex sm:flex-wrap gap-4 max-h-[35rem] overflow-hidden overflow-y-auto drop-shadow-xl border-t  pt-8">
                   <div className="product-image w-1/2 sm:w-full max-h-[35rem] shadow-xl sm:static sticky top-0">
                     <img src={product.img} alt="" className="w-full h-auto" />
                   </div>
 
                   <div className="prodluct-info w-1/2 sm:w-full ">
-                    <div className="product-name text-4xl font-bold">
+                    <div className="product-name text-4xl font-bold text-Blue">
                       {product.name}
                     </div>
                     <Rating
@@ -325,19 +324,55 @@ function SingleProduct() {
                     <div className="col px-4">
                       <div className="info-tabs flex flex-wrap gap-8 mb-12">
                         <div
-                          className="discription"
+                          className={`discription ${
+                            showInfo === 0
+                              ? "bg-Blue rounded-full px-4"
+                              : "border rounded-full px-4"
+                          }`}
                           onClick={() => setShowInfo(0)}
                         >
-                          <Button>Description</Button>
+                          <Button
+                            className={`discription ${
+                              showInfo === 0 ? " " : "border border-red-50"
+                            }`}
+                            style={{
+                              color: showInfo === 0 ? "#fff" : "var(--blue)",
+                            }}
+                          >
+                            Description
+                          </Button>
                         </div>
                         <div
-                          className="additionl-description"
+                          className={`additionl-description ${
+                            showInfo === 1
+                              ? "bg-Blue rounded-full px-4"
+                              : "border rounded-full px-4 "
+                          }`}
                           onClick={() => setShowInfo(1)}
                         >
-                          <Button>More Info</Button>
+                          <Button
+                            style={{
+                              color: showInfo === 1 ? "#fff" : "var(--blue)",
+                            }}
+                          >
+                            More Info
+                          </Button>
                         </div>
-                        <div className="vendor" onClick={() => setShowInfo(2)}>
-                          <Button>Tags</Button>
+                        <div
+                          className={`vendor ${
+                            showInfo === 2
+                              ? "bg-Blue rounded-full px-4"
+                              : "border rounded-full px-4"
+                          }`}
+                          onClick={() => setShowInfo(2)}
+                        >
+                          <Button
+                            style={{
+                              color: showInfo === 2 ? "#fff" : "var(--blue)",
+                            }}
+                          >
+                            Tags
+                          </Button>
                         </div>
                       </div>
                       {showInfo === 0 && (
@@ -409,51 +444,52 @@ function SingleProduct() {
             );
           })}
           <div className="related-products ">
-            <div className="all-product-container h-min">
+            <div className="all-product-container ">
               <Slider {...settings}>
-                {popularItems.map((val) => {
+                {popularItems.map((val, index) => {
                   return (
-                    <>
-                      <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
-                        <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
-                          <img
-                            src={val.img}
-                            alt=""
-                            className="m-auto bg-[#94C9F5]"
-                          />
-                        </div>
-                        <div className="product-info ">
-                          <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
-                            {val.name}
-                          </h1>
+                    <div
+                      key={val.id}
+                      className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4"
+                    >
+                      <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
+                        <img
+                          src={val.img}
+                          alt=""
+                          className="m-auto bg-[#94C9F5]"
+                        />
+                      </div>
+                      <div className="product-info ">
+                        <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
+                          {val.name}
+                        </h1>
 
-                          <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
-                            {val.desc.length > 80
-                              ? val.desc.substr(0, 80) + "..."
-                              : val.desc}
-                          </p>
-                          <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
-                            <Rating
-                              readOnly
-                              defaultValue={4}
-                              precision={0.5}
-                              style={{ fontSize: "18px" }}
-                            />
-                            <Button
-                              style={{
-                                background: "var(--btnblue)",
-                                color: "#fff",
-                                padding: "6px 20px",
-                                width:
-                                  window.innerWidth > 560 ? "inherit" : "100%",
-                              }}
-                            >
-                              Buy Now
-                            </Button>
-                          </div>
+                        <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
+                          {val.desc.length > 80
+                            ? val.desc.substr(0, 80) + "..."
+                            : val.desc}
+                        </p>
+                        <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
+                          <Rating
+                            readOnly
+                            defaultValue={4}
+                            precision={0.5}
+                            style={{ fontSize: "18px" }}
+                          />
+                          <Button
+                            style={{
+                              background: "var(--btnblue)",
+                              color: "#fff",
+                              padding: "6px 20px",
+                              width:
+                                window.innerWidth > 560 ? "inherit" : "100%",
+                            }}
+                          >
+                            Buy Now
+                          </Button>
                         </div>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
               </Slider>

@@ -52,7 +52,7 @@ const productdata = [
 
       {
         id: "3",
-        name: "Cosmetic Lip/Eyeliner Boxes",
+        name: "Cosmetic Eyeliner Boxes",
         desc: "Cosmetic Lip/Eyeliner Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Cosmetic Lip/Eyeliner Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
         // img: "/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png",
         img: "/demo.png",

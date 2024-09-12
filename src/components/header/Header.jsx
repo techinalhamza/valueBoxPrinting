@@ -38,7 +38,7 @@ function Header() {
           <div className="logo w-[20%}">
             <Link to="/">
               {" "}
-              <img src={logo} alt="" className="w-44" />
+              {/* <img src={logo} alt="" className="w-44" /> */}
             </Link>
           </div>
           <div className="header-search-bar flex items-center bg-white  border border-gray-200 h-min rounded-full overflow-hidden w-[40%] px-6">
