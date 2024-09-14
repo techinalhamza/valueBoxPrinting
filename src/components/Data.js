@@ -8,20 +8,20 @@ const productdat = [
         desc: "Body & Face Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Body & Face Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
         img: "/productsImages/Body & Face Lotion Boxes.png",
         description:
-          "Lotions are included in the beauty products and are favored by people of every age. Specially the body lotion gives complete therapy to our body from the environmental harsh, cold, and hot effects. As these are directly related to our skin, they require a supreme level of care and protection. This protection is provided by body lotion boxes. Choosing the right boxes for your products is crucial because it helps attract more clients. They give a cheerful feeling to the viewer or recipient. These boxes not only protect your products from damage and mishandling but also present them in colorful and attractive ways, which can speed up their sales and ratings. Whitening, moisturizing, healing—all kinds of lotions related to body care need proper packaging. Lotion boxes are mostly made with corrugated sheets or cardboard material; however, plastic material can also be used in some cases. Custom body lotion boxes include options for size, style, and thickness based on the product and client specifications. Made with the latest technologies like die-cutting, these boxes are stylish and up-to-date. They are often made fashionable as gifts for special occasions like weddings, parties, and other events, with windows inserted on the front to give a clear view of the inside products. Cardboard material in this category comes in different stock thicknesses, such as 14pt, 16pt, and 18pt, depending on the product's needs. These boxes are used not only for presenting and storing items but also for shipping, which may be domestic or international. To enhance protection during shipping, boxes are made to ship flat, with corrugated sheets inside for additional strength. Body lotion boxes can be printed with patterns like flowers and artistic designs. They can be enhanced with eye-catching graphics and attractive color schemes using Pantone printing systems alongside CMYK combinations, raised ink, and embossed ink printing. Common finishing options include embossing, gloss or matte lamination, varnish, aqueous coating, stamping, hot foiling (gold or silver), and UV spotting, providing additional shine, durability, and strength. We offer various custom printed body and face lotion boxes in different dimensions and designs, focusing on both presentation and protection. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
+          "Lotions are included in the beauty products and are favored by people of every age. Specially the body lotion gives complete therapy to our body from the environmental harsh, cold, and hot effects. As these are directly related to our skin, they require a supreme level of care and protection. This protection is provided by body lotion boxes. Choosing the right boxes for your products is crucial because it helps attract more clients. They give a cheerful feeling to the viewer or recipient. These boxes not only protect your products from damage and mishandling but also present them in colorful and attractive ways, which can speed up their sales and ratings. Whitening, moisturizing, healing—all kinds of lotions related to body care need proper packaging. Lotion boxes are mostly made with corrugated sheets or cardboard material; however, plastic material can also be used in some cases. Custom body lotion boxes include options for size, style, and thickness based on the product and client  specifications. Made with the latest technologies like die-cutting, these boxes are stylish and up-to-date. They are often made fashionable as gifts for special occasions like weddings, parties, and other events, with windows inserted on the front to give a clear view of the inside products. Cardboard material in this category comes in different stock thicknesses, such as 14pt, 16pt, and 18pt, depending on the product's needs. These boxes are used not only for presenting and storing items but also for shipping, which may be domestic or international. To enhance protection during shipping, boxes are made to ship flat, with corrugated sheets inside for additional strength. Body lotion boxes can be printed with patterns like flowers and artistic designs. They can be enhanced with eye-catching graphics and attractive color schemes using Pantone printing systems alongside CMYK combinations, raised ink, and embossed ink printing. Common  finishingOptions include embossing, gloss or matte lamination, varnish, aqueous coating, stamping, hot foiling (gold or silver), and UV spotting, providing additional shine, durability, and strength. We offer various custom printed body and face lotion boxes in different dimensions and designs, focusing on both presentation and protection. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
         tags: "custom printed body and face lotion boxes, cosmetics box printing, size, shape, color, thickness, design",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Body & Face Lotion Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+             specification:
               "Body & Face Lotion Boxes can be customized with client's logos and designs.",
-            Colors:
+            colors:
               "Body & Face Lotion Boxes available in CMYK full color and Pantone color.",
-            "Finishing Options":
-              "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
-            "Production Time":
-              "Production time is 7 - 10 business working days. Rush delivery is available.",
+            " finishingOptions":
+              "Available  finishingOptions include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
+            "productionTime":
+              "productionTime is 7 - 10 business working days. Rush delivery is available.",
           },
         ],
       },
@@ -32,20 +32,20 @@ const productdat = [
         img: "https://valueboxprinting.com/images/typeimages/cosmetic-jar-boxes.png",
         popular: "true",
         description:
-          "Cosmetic jar boxes are essential for packaging products like creams, lotions, powders, and other cosmetics that come in jar bottles. These boxes keep the jars safe from environmental factors and present the products in a more elegant and professional way. They are designed for high-end products like anti-aging creams, scrubs, beauty creams, and body butter. Cosmetic jar boxes enhance the shelf life and market value of the products by protecting them from direct contact with the environment, ensuring their composition remains intact. These boxes are customizable in size, style, and thickness based on client specifications and product needs. Modern techniques like die-cutting make the boxes stylish and elegant, with various printing and finishing options available to meet aesthetic and protective needs. Options include gloss or matte lamination, embossing, hot foiling, and UV spotting. They can also be used as gift packaging, adding a touch of luxury to the product presentation. Reliable companies offer printed boxes with colorful patterns, graphics, and custom designs that match client requirements. We provide customized cosmetic jar boxes with artwork tailored to your size requirements, quick delivery, and free graphic design services with unlimited revisions. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
+          "Cosmetic jar boxes are essential for packaging products like creams, lotions, powders, and other cosmetics that come in jar bottles. These boxes keep the jars safe from environmental factors and present the products in a more elegant and professional way. They are designed for high-end products like anti-aging creams, scrubs, beauty creams, and body butter. Cosmetic jar boxes enhance the shelf life and market value of the products by protecting them from direct contact with the environment, ensuring their composition remains intact. These boxes are customizable in size, style, and thickness based on client  specifications and product needs. Modern techniques like die-cutting make the boxes stylish and elegant, with various printing and  finishingOptions available to meet aesthetic and protective needs. Options include gloss or matte lamination, embossing, hot foiling, and UV spotting. They can also be used as gift packaging, adding a touch of luxury to the product presentation. Reliable companies offer printed boxes with colorful patterns, graphics, and custom designs that match client requirements. We provide customized cosmetic jar boxes with artwork tailored to your size requirements, quick delivery, and free graphic design services with unlimited revisions. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
         tags: "custom printed cosmetic jar boxes, custom cosmetic boxes, custom cosmetic packaging, custom jar boxes wholesale, custom cosmetic jar boxes, cosmetic jar box printing, custom cosmetic packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Cosmetic Jar Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+             specification:
               "Cosmetic Jar Boxes can be customized with client's logos and designs.",
-            Colors:
+            colors:
               "Cosmetic Jar Boxes available in CMYK full color and Pantone color.",
-            "Finishing Options":
-              "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
-            "Production Time":
-              "Production time is 7 - 10 business working days. Rush delivery is available.",
+            " finishingOptions":
+              "Available  finishingOptions include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
+            "productionTime":
+              "productionTime is 7 - 10 business working days. Rush delivery is available.",
           },
         ],
       },
@@ -57,18 +57,18 @@ const productdat = [
         img: "/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png",
         popular: "true",
         description:
-          "Cosmetic Lip/Eyeliner Boxes are essential for enhancing the presentation and protection of eyeliners, which come in various forms such as gel, powder, and liquid. These boxes maintain the quality of the product, protect it from environmental factors, and serve as a brand insignia that attracts customers. Available in a variety of sizes, styles, and thicknesses, they are tailored to meet product specifications and client needs. Customization options include die-cut designs, eye-catching graphics, and multiple printing techniques such as CMYK, Pantone combinations, and special ink systems. Modern finishing options like lamination, embossing, and UV spotting add elegance without significantly raising costs. The creative designs of these boxes make them an effective cosmetic marketing tool, helping to differentiate brands in a crowded market. Options like windows in the packaging further enhance visibility and appeal. We provide personalized designs tailored to your brand, ensuring that every aspect—from material quality to design aesthetics—meets your standards. For any inquiries, contact us at Sales@ValueBoxPrinting.com, and our designer will promptly respond with a design layout.",
+          "Cosmetic Lip/Eyeliner Boxes are essential for enhancing the presentation and protection of eyeliners, which come in various forms such as gel, powder, and liquid. These boxes maintain the quality of the product, protect it from environmental factors, and serve as a brand insignia that attracts customers. Available in a variety of sizes, styles, and thicknesses, they are tailored to meet product  specifications and client needs. Customization options include die-cut designs, eye-catching graphics, and multiple printing techniques such as CMYK, Pantone combinations, and special ink systems. Modern  finishingOptions like lamination, embossing, and UV spotting add elegance without significantly raising costs. The creative designs of these boxes make them an effective cosmetic marketing tool, helping to differentiate brands in a crowded market. Options like windows in the packaging further enhance visibility and appeal. We provide personalized designs tailored to your brand, ensuring that every aspect—from material quality to design aesthetics—meets your standards. For any inquiries, contact us at Sales@ValueBoxPrinting.com, and our designer will promptly respond with a design layout.",
         tags: "cosmetic lip eyeliner boxes, custom cosmetic boxes wholesale, custom cosmetic boxes, cosmetic lip eyeliner packaging boxes, lip eyeliner boxes, cosmetic lip eyeliner boxes wholesale, lip eyeliner cosmetic boxes, custom printed lip eyeliner cosmetic boxes, cheap custom lip eyeliner boxes, custom printed lip eyeliner cosmetic packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Cosmetic Lip/Eyeliner Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
+             specification:
               "Cosmetic Lip/Eyeliner Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes are available.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -80,18 +80,18 @@ const productdat = [
         img: "/productsImages/Cosmetics & Beauty/Custom Eyelash Boxes.png",
         popular: "true",
         description:
-          "Custom Eyelash Boxes are tailored packaging solutions designed to enhance the presentation and protection of eyelash products. Available in a wide range of shapes, sizes, and styles, these boxes can be customized with various options such as die-cut windows, vibrant color schemes, and elegant finishes. Major cosmetic brands use stylish and attractive eyelash boxes to promote their products, often including window panes that allow customers to view the product inside. These boxes are ideal for both existing and new eyelash lines, helping to boost brand visibility and increase sales. Available in different stocks like 14pt, 16pt, 18pt, and 24pt White SBS C1S C2S, with additional options like gold or silver foiling, these boxes not only add visual appeal but also ensure safe and secure product delivery. Our design services are free, offering unlimited revisions to meet client specifications. Contact us at Sales@ValueBoxPrinting.com to discuss your custom design needs, and receive a PDF or Adobe Illustrator layout promptly.",
+          "Custom Eyelash Boxes are tailored packaging solutions designed to enhance the presentation and protection of eyelash products. Available in a wide range of shapes, sizes, and styles, these boxes can be customized with various options such as die-cut windows, vibrant color schemes, and elegant finishes. Major cosmetic brands use stylish and attractive eyelash boxes to promote their products, often including window panes that allow customers to view the product inside. These boxes are ideal for both existing and new eyelash lines, helping to boost brand visibility and increase sales. Available in different stocks like 14pt, 16pt, 18pt, and 24pt White SBS C1S C2S, with additional options like gold or silver foiling, these boxes not only add visual appeal but also ensure safe and secure product delivery. Our design services are free, offering unlimited revisions to meet client  specifications. Contact us at Sales@ValueBoxPrinting.com to discuss your custom design needs, and receive a PDF or Adobe Illustrator layout promptly.",
         tags: "eyelash boxes, custom eyelash boxes, eyelash packaging boxes wholesale, custom eyelash packaging, eyelash packaging, custom printed eyelash boxes, custom eyelash box printing, custom printed eyelash box packaging, cheap custom eyelash boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Custom Eyelash Boxes available in different shapes, styles, and various sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Custom Eyelash Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -107,14 +107,14 @@ const productdat = [
         tags: "hair extension boxes, custom hair extension packaging, hair extension packaging boxes, custom hair extension boxes, packaging for hair extensions, hair extension printing boxes, hair extension boxes wholesale, custom printed hair extension boxes, custom hair extension, boxes hair extension",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Hair Extension Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Hair Extension Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -129,14 +129,14 @@ const productdat = [
         tags: "lip gloss boxes, custom lip gloss packaging wholesale, lip gloss box, lip gloss packaging boxes, lip gloss printing boxes, lip gloss printed boxes, custom lip gloss boxes, empty lip gloss boxes, custom lip gloss packaging, lip balm tube boxes, custom lip balm display boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Lip Gloss Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Lip Gloss Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -152,14 +152,14 @@ const productdat = [
         tags: "lipstick boxes, custom lipstick boxes, custom printed lipstick boxes, lipstick boxes wholesale, custom lipstick box packaging, lipstick packaging boxes, lipstick printing boxes, standard lipstick box size, blank lipstick boxes, bulk lipstick boxes, lipstick box packaging, lipstick print boxes, lipstick boxes for sale",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Lipstick Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Lipstick Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -175,14 +175,14 @@ const productdat = [
         tags: "lotion boxes, lotion boxes wholesale, custom printed lotion packaging boxes, whitening lotion boxes, baby lotion boxes, lotion gift boxes, custom lotion box, lotion printed boxes, lotion print boxes, lotion packaging boxes, packaging lotion boxes, printed lotion boxes, lotion printing boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Lotion Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Lotion Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -198,14 +198,14 @@ const productdat = [
         tags: "makeup boxes, custom makeup boxes, custom makeup packaging boxes wholesale, custom makeup boxes wholesale, custom printed makeup boxes, printed makeup boxes, cheap custom makeup boxes, custom makeup packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Makeup Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Makeup Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -220,14 +220,14 @@ const productdat = [
         tags: "mascara boxes, custom mascara boxes, mascara packaging boxes, mascara boxes wholesale, mascara box packaging, custom printed mascara boxes, mascara printed boxes, mascara box printing, mascara print boxes, custom mascara packaging boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Mascara Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Mascara Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -243,14 +243,14 @@ const productdat = [
         tags: "perfume boxes, custom printed perfume packaging boxes, custom perfume boxes, perfume boxes for sale, perfume boxes design, perfume boxes wholesale, custom perfume boxes, perfume box suppliers, perfume box manufacturers, perfume packaging design ideas, perfume gift boxes wholesale, perfume boxes packaging, Perfume packaging Boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Perfume Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Perfume Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -265,14 +265,14 @@ const productdat = [
         tags: "product boxes, custom product packaging boxes, custom product boxes, wholesale product boxes, custom printed product boxes, custom product boxes with logo, product packaging boxes with no minimum, custom product boxes wholesale, cheap custom product boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Product Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Product Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
@@ -287,59 +287,22 @@ const productdat = [
         tags: "custom printed soap boxes, custom soap boxes wholesale, custom wholesale soap packaging, wholesale soap boxes, handmade soap boxes, kraft soap boxes wholesale, black soap boxes, custom printed soap boxes, cheap custom soap boxes",
         moreInfo: [
           {
-            "Size / Styles":
+            "sizeStyles":
               "Soap Boxes available in different shapes, styles, and sizes according to clients' specific requirements.",
-            Specification:
+             specification:
               "Soap Boxes can be customized with client's logos and designs.",
-            Colors: "Available in CMYK full color and Pantone color options.",
-            "Finishing Options":
+            colors: "Available in CMYK full color and Pantone color options.",
+            " finishingOptions":
               "Options include Matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss finishes.",
-            "Production Time":
+            "productionTime":
               "7 - 10 business working days. Rush delivery is available.",
           },
         ],
       },
     ],
   },
-  {
-    category: "Retail Packaging Boxes",
-    items: [
-      {
-        id: "1",
-        name: "Body & Face Lotion Boxes",
-        desc: "Body & Face Lotion Boxes with full-color CMYK/PMS printing process 14pt, 18pt, and 24pt card stock available with Foiling, Embossing, Spot UV, and other custom print options. We fully customize your Body & Face Lotion Boxes at very low prices with no minimum order quantity. Fill in the quote form to get a price quote right away. FREE Shipping & Design Services.",
-        img: "/productsImages/Body & Face Lotion Boxes.png",
-        description:
-          "Lotions are included in the beauty products and are favored by people of every age. Specially the body lotion gives complete therapy to our body from the environmental harsh, cold, and hot effects. As these are directly related to our skin, they require a supreme level of care and protection. This protection is provided by body lotion boxes. Choosing the right boxes for your products is crucial because it helps attract more clients. They give a cheerful feeling to the viewer or recipient. These boxes not only protect your products from damage and mishandling but also present them in colorful and attractive ways, which can speed up their sales and ratings. Whitening, moisturizing, healing—all kinds of lotions related to body care need proper packaging. Lotion boxes are mostly made with corrugated sheets or cardboard material; however, plastic material can also be used in some cases. Custom body lotion boxes include options for size, style, and thickness based on the product and client specifications. Made with the latest technologies like die-cutting, these boxes are stylish and up-to-date. They are often made fashionable as gifts for special occasions like weddings, parties, and other events, with windows inserted on the front to give a clear view of the inside products. Cardboard material in this category comes in different stock thicknesses, such as 14pt, 16pt, and 18pt, depending on the product's needs. These boxes are used not only for presenting and storing items but also for shipping, which may be domestic or international. To enhance protection during shipping, boxes are made to ship flat, with corrugated sheets inside for additional strength. Body lotion boxes can be printed with patterns like flowers and artistic designs. They can be enhanced with eye-catching graphics and attractive color schemes using Pantone printing systems alongside CMYK combinations, raised ink, and embossed ink printing. Common finishing options include embossing, gloss or matte lamination, varnish, aqueous coating, stamping, hot foiling (gold or silver), and UV spotting, providing additional shine, durability, and strength. We offer various custom printed body and face lotion boxes in different dimensions and designs, focusing on both presentation and protection. For custom requests, email us at Sales@ValueBoxPrinting.com, and our designer will respond promptly with a PDF/Adobe Illustrator layout.",
-        tags: "custom printed body and face lotion boxes, cosmetics box printing, size, shape, color, thickness, design",
-        moreInfo: [
-          {
-            "Size / Styles":
-              "Body & Face Lotion Boxes in different shapes, styles, and various sizes are available according to clients' specific requirements.",
-            Specification:
-              "Body & Face Lotion Boxes can be customized with client's logos and designs.",
-            Colors:
-              "Body & Face Lotion Boxes available in CMYK full color and Pantone color.",
-            "Finishing Options":
-              "Available finishing options include matte/gloss lamination, varnish, aqueous coating, spot UV, gold/silver hot stamping, emboss, or deboss.",
-            "Production Time":
-              "Production time is 7 - 10 business working days. Rush delivery is available.",
-          },
-        ],
-      },
-    ],
-  },
-];
 
-// {
-//   id: "3",
-//   name: "",
-//   desc: "",
-//   img: "",
-// },
-// {
-//   id: "3",
-//   name: "",
-//   desc: "",
-//   img: "",
-// },
+
+
+  
+]

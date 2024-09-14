@@ -30,9 +30,9 @@ function Navbar({ navOpen }) {
                 </NavLink>
               </li>
               <li>
-                <NavLink exact="true" to="/products">
-                  Blog
-                </NavLink>
+                {/* <NavLink exact="true" to="/products"> */}
+                Categories
+                {/* </NavLink> */}
               </li>
               <li>
                 <NavLink exact="true" to="/contact">

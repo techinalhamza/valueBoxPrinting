@@ -4,6 +4,7 @@ import productdata from "../Products";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import star from "/star.svg";
+import Product from "../product/Product";
 
 function PopularProduct() {
   const [products, setProducts] = useState(productdata);
@@ -13,7 +14,7 @@ function PopularProduct() {
     .map((val) => val.items.filter((item) => item.popular === "true"))
     .flat(); // This flattens the array of arrays
 
-  // console.log(popularItems.map((val) => val.id));
+  console.log(popularItems.map((val) => val.name));
 
   return (
     <>
@@ -37,7 +38,7 @@ function PopularProduct() {
                 <Link>Top Seller</Link>
               </li>
               <li>
-                <Link>
+                <Link to="/shop">
                   <Button
                     style={{
                       background: "var(--btnblue)",
@@ -59,235 +60,8 @@ function PopularProduct() {
               </li>
             </ul>
           </div>
-          <div
-            className="all-product-container mt-8 pb-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4"
-            // style={{
-            //   display: "grid",
-            //   gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
-            //   gridRowGap: "1rem",
-            // }}
-          >
-            {popularItems.map((val) => {
-              // console.log(val.name);
-              return (
-                <>
-                  <Link
-                    to={`/singleProduct/${val.name.replace(/\s+/g, "-")}`}
-                    key={val.id}
-                  >
-                    <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4">
-                      <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
-                        <img
-                          src={val.img}
-                          alt=""
-                          className="m-auto bg-[#94C9F5]"
-                        />
-                      </div>
-                      <div className="product-info ">
-                        <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
-                          {val.name}
-                        </h1>
 
-                        <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
-                          {val.desc.length > 80
-                            ? val.desc.substr(0, 80) + "..."
-                            : val.desc}
-                        </p>
-                        <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
-                          <Rating
-                            readOnly
-                            defaultValue={4}
-                            precision={0.5}
-                            style={{ fontSize: "18px" }}
-                          />
-                          <Button
-                            style={{
-                              background: "var(--btnblue)",
-                              color: "#fff",
-                              padding: "6px 20px",
-                              width:
-                                window.innerWidth > 560 ? "inherit" : "100%",
-                            }}
-                          >
-                            Buy Now
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </>
-              );
-            })}
-
-            {/* <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div>
-            <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] rounded-lg flex flex-col justify-between">
-              <div className="product-image-bx w-full">
-                <img src={product1} alt="" className="m-auto" />
-              </div>
-              <div className="product-info p-4">
-                <h1 className="product-name font-bold">Coffee Cups</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit voluptatum iusto voluptatem?
-                </p>
-                <div className="product-btn flex items-center justify-between  text-[#FAC409] mt-8">
-                  <Button
-                    style={{
-                      background: "#075697",
-                      color: "#fff",
-                      padding: "6px 20px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                  <span>15% discount</span>
-                </div>
-              </div>
-            </div> */}
-          </div>
+          <Product items={popularItems} />
         </div>
       </div>
     </>
