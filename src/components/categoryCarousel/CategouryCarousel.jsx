@@ -9,6 +9,7 @@ import catImg6 from "/category/body fusion.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function CategouryCarousel() {
   var settings = {
@@ -86,9 +87,16 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg2} alt="" />
                 </div>
-                <h1 className="w-40 text-center">
-                  Software & Electronic Boxes
-                </h1>
+                <Link
+                  to={`/category/${"Software & Electronic Boxes"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">
+                    Software & Electronic Boxes
+                  </h1>
+                </Link>
+
                 <div className="category-name"></div>
               </div>
             </div>
@@ -97,7 +105,13 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg3} alt="" />
                 </div>
-                <h1 className="w-40 text-center">Soap Boxes</h1>
+                <Link
+                  to={`/category/${"Software & Electronic Boxes"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">Soap Boxes</h1>
+                </Link>
                 <div className="category-name"></div>
               </div>
             </div>
@@ -106,7 +120,13 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg4} alt="" />
                 </div>
-                <h1 className="w-40 text-center">Window Boxes</h1>
+                <Link
+                  to={`/category/${"Software & Electronic Boxes"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">Window Boxes</h1>
+                </Link>
                 <div className="category-name"></div>
               </div>
             </div>
@@ -115,7 +135,13 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg5} alt="" />
                 </div>
-                <h1 className="w-40 text-center">Popup Display Boxes</h1>
+                <Link
+                  to={`/category/${"Software & Electronic Boxes"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">Popup Display Boxes</h1>
+                </Link>
                 <div className="category-name"></div>
               </div>
             </div>
@@ -124,7 +150,13 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg6} alt="" />
                 </div>
-                <h1 className="w-40 text-center">Gable Boxes</h1>
+                <Link
+                  to={`/category/${"Software & Electronic Boxes"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">Gable Boxes</h1>
+                </Link>
                 <div className="category-name"></div>
               </div>
             </div>
