@@ -72,7 +72,7 @@ function Listing() {
               </button>
               <div
                 className={`absolute bg-white border border-gray-400 rounded-b shadow-md w-full overflow-hidden transition-max-height duration-300 ease-in-out ${
-                  isOpen ? "max-h-60" : "max-h-0"
+                  isOpen ? "max-h-min" : "max-h-0"
                 }`}
               >
                 <ul>

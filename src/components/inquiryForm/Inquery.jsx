@@ -27,7 +27,7 @@ function Inquery() {
               <span className="text-Yellow"> Immediate Box Printing </span>{" "}
               Need, We Can Typically Turn Your Quote Around In Minutes.
             </p>
-            <form className="mt-8">
+            <form className="mt-8 drop-shadow">
               {/* First Row: Length, Width, Height */}
               <div className="flex flex-wrap -mx-2">
                 <div className=" w-1/3 px-2 mb-4">
@@ -41,7 +41,7 @@ function Inquery() {
                     id="length"
                     name="length"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; 12.5in"
                     required
                   />
@@ -57,7 +57,7 @@ function Inquery() {
                     id="width"
                     name="width"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; 5.5in"
                     required
                   />
@@ -73,7 +73,7 @@ function Inquery() {
                     id="height"
                     name="height"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; 8.5in"
                     required
                   />
@@ -93,7 +93,7 @@ function Inquery() {
                     id="stockOption"
                     name="stockOption"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     // placeholder="Stock Option"
                   />
                 </div>
@@ -108,7 +108,7 @@ function Inquery() {
                     id="printOption"
                     name="printOption"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     // placeholder="Print Option"
                   />
                 </div>
@@ -123,7 +123,7 @@ function Inquery() {
                     id="finishingOption"
                     name="finishingOption"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     // placeholder="Finishing Option"
                   />
                 </div>
@@ -142,7 +142,7 @@ function Inquery() {
                     id="quantity"
                     name="quantity"
                     type="number"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; 50"
                     required
                   />
@@ -158,7 +158,7 @@ function Inquery() {
                     id="fullName"
                     name="fullName"
                     type="text"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; Jewl Howland"
                   />
                 </div>
@@ -173,7 +173,7 @@ function Inquery() {
                     id="email"
                     name="email"
                     type="email"
-                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" w-full px-3 py-1 border rounded-xl focus:outline-none  focus:ring-2 focus:ring-blue-500"
                     placeholder="example; abcd@gmail.com"
                     required
                   />
@@ -192,7 +192,7 @@ function Inquery() {
                   id="jobDetails"
                   name="jobDetails"
                   rows="8"
-                  className="w-full px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-1 border rounded-lg focus:outline-none  focus:ring-2 focus:ring-blue-500"
                   placeholder="Type Your Needs Here"
                 ></textarea>
               </div>

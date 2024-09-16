@@ -70,9 +70,13 @@ function SingleProduct() {
           {selectedProduct.map((product) => {
             return (
               <>
-                <div className="product-content flex sm:flex-wrap gap-4 max-h-[35rem] overflow-hidden overflow-y-auto drop-shadow-xl border-t  pt-8">
-                  <div className="product-image w-1/2 sm:w-full max-h-[35rem] drop-shadow border sm:static sticky top-0">
-                    <img src={product.img} alt="" className="w-full h-auto" />
+                <div className="product-content flex sm:flex-wrap gap-4  overflow-hidden overflow-y-auto drop-shadow-xl border-t  pt-8">
+                  <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0">
+                    <img
+                      src={product.img}
+                      alt=""
+                      className="w-full h-auto drop-shadow"
+                    />
                   </div>
 
                   <div className="prodluct-info w-1/2 sm:w-full ">

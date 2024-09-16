@@ -78,7 +78,13 @@ function CategouryCarousel() {
                 <div className="category-img border border-solid w-40 rounded-full overflow-hidden h-40 ">
                   <img src={catImg1} alt="" />
                 </div>
-                <h1 className="w-40 text-center">Custom Cosmetic Boxes</h1>
+                <Link
+                  to={`/category/${"Cosmetics & Beauty"
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <h1 className="w-40 text-center">Cosmetics & Beauty</h1>
+                </Link>
                 <div className="category-name"></div>
               </div>
             </div>
