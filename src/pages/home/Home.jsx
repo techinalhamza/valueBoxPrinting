@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSlider from "../../components/hero/HeroSlider";
 import CategouryCarousel from "../../components/categoryCarousel/CategouryCarousel";
 import PopularProduct from "../../components/popularProducts/PopularProduct";
@@ -10,16 +10,25 @@ import Testimonals from "../../components/testimonials/Testimonals";
 import FaqAccording from "../../components/FaqAccording/FaqAccording";
 
 function Home() {
+  const inqueryRef = useRef(null);
+
+  const scrollToInquery = () => {
+    if (inqueryRef.current) {
+      inqueryRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
-      <HeroSlider />
+      <HeroSlider scrollToInquery={scrollToInquery} />
       <PopularProduct />
       <ChooseUs />
       <Coating />
       <CategouryCarousel />
       <OurExperts />
       <FaqAccording />
-      <Inquery />
+      <div ref={inqueryRef}>
+        <Inquery />
+      </div>
       <Testimonals />
     </>
   );

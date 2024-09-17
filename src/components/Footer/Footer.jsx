@@ -45,32 +45,27 @@ function Footer() {
                 <div className="links">
                   <ul>
                     <li>
-                      <Link>
+                      <Link to="/">
                         {" "}
                         <TiArrowRight />
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link>
+                      <Link to="/shop">
                         <TiArrowRight />
                         Shop
                       </Link>
                     </li>
                     <li>
-                      <Link>
+                      <Link to="/about">
                         <TiArrowRight />
                         About us
                       </Link>
                     </li>
+
                     <li>
-                      <Link>
-                        <TiArrowRight />
-                        Blogs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link>
+                      <Link to="/contact">
                         <TiArrowRight />
                         Contact us
                       </Link>
@@ -100,12 +95,7 @@ function Footer() {
                         Terms & Conditions
                       </Link>
                     </li>
-                    <li>
-                      <Link>
-                        <TiArrowRight />
-                        Contact Us
-                      </Link>
-                    </li>
+
                     <li>
                       <Link>
                         <TiArrowRight />

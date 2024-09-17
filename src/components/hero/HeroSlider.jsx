@@ -11,7 +11,7 @@ import star from "/star.svg";
 import { Button } from "@mui/material";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-function HeroSlider() {
+function HeroSlider({ scrollToInquery }) {
   var settings = {
     dots: true,
     speed: 500,
@@ -82,6 +82,7 @@ function HeroSlider() {
                       fontWeight: "bold",
                     }}
                     endIcon={<MdOutlineKeyboardArrowRight />}
+                    onClick={scrollToInquery}
                   >
                     Request a Quote
                   </Button>
@@ -145,6 +146,7 @@ function HeroSlider() {
                       fontWeight: "bold",
                     }}
                     endIcon={<MdOutlineKeyboardArrowRight />}
+                    onClick={scrollToInquery}
                   >
                     Request a Quote
                   </Button>
@@ -208,6 +210,7 @@ function HeroSlider() {
                       fontWeight: "bold",
                     }}
                     endIcon={<MdOutlineKeyboardArrowRight />}
+                    onClick={scrollToInquery}
                   >
                     Request a Quote
                   </Button>

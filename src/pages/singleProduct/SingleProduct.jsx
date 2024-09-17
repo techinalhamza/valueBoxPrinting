@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./SingleProduct.css";
 import product from "/productsImages/Cosmetics & Beauty/Custom Eyelash Boxes.png";
 import { filledInputClasses, Rating } from "@mui/material";
@@ -7,7 +7,7 @@ import { FaAngleRight } from "react-icons/fa";
 import productdata from "../../components/Products";
 import Slider from "react-slick";
 import { useParams } from "react-router-dom";
-
+import emailjs from "@emailjs/browser";
 import {
   FaFacebookF,
   FaInstagram,
@@ -22,7 +22,7 @@ function SingleProduct() {
   const [showInfo, setShowInfo] = useState(0);
   const [products, setProducts] = useState(productdata);
   const [selectedProduct, setSelectedProduct] = useState([]); // State to store the filtered product
-
+  const form = useRef();
   const { name } = useParams();
   const popularItems = products
     .map((val) => val.items.filter((item) => item.popular === "true"))
@@ -63,6 +63,23 @@ function SingleProduct() {
     ],
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm("service_sutf7zt", "template_5jpdhhr", form.current, {
+        publicKey: "VIPi5dd6OnTH45TQV",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <>
       <div className="singleProduct-container">
@@ -94,12 +111,12 @@ function SingleProduct() {
                     <div className="short-desc my-4">{product.desc}</div>
 
                     <div className="inquiry-form">
-                      <form>
+                      <form ref={form} onSubmit={sendEmail}>
                         {/* First Row: Length, Width, Height */}
                         <div className="flex flex-wrap -mx-2">
-                          <div className=" w-1/3 px-2 mb-4">
+                          <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="length"
                             >
                               Length (inch)*
@@ -108,14 +125,14 @@ function SingleProduct() {
                               id="length"
                               name="length"
                               type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Length"
                               required
                             />
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="width"
                             >
                               Width (inch)*
@@ -124,14 +141,14 @@ function SingleProduct() {
                               id="width"
                               name="width"
                               type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Width"
                               required
                             />
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="height"
                             >
                               Height (inch)*
@@ -140,7 +157,7 @@ function SingleProduct() {
                               id="height"
                               name="height"
                               type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Height"
                               required
                             />
@@ -151,48 +168,113 @@ function SingleProduct() {
                         <div className="flex flex-wrap -mx-2">
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="stockOption"
                             >
                               Stock Option
                             </label>
-                            <input
+                            <select
                               id="stockOption"
                               name="stockOption"
-                              type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Stock Option"
-                            />
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                              <option value="">Select Print Option</option>
+                              <option value="Full_Color_Printing">
+                                Full Color Printing
+                              </option>
+                              <option value="1_Color_Printing">
+                                1 Color Printing
+                              </option>
+                              <option value="2_Color_Printing">
+                                2 Color Printing
+                              </option>
+                              <option value="3_Color_Printing">
+                                3 Color Printing
+                              </option>
+                              <option value="No_Printing">No Printing</option>
+                              <option value="PMS_Color_Printing">
+                                PMS Color Printing
+                              </option>
+                            </select>
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="printOption"
                             >
                               Print Option
                             </label>
-                            <input
+                            <select
                               id="printOption"
                               name="printOption"
-                              type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Print Option"
-                            />
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                              <option value="">Select Stock Option</option>
+                              <option value="14_pt_Card_Stock">
+                                14 pt. Card Stock
+                              </option>
+                              <option value="16_pt_Card_Stock">
+                                16 pt. Card Stock
+                              </option>
+                              <option value="18_pt_Card_Stock">
+                                18 pt. Card Stock
+                              </option>
+                              <option value="24_pt_Card_Stock">
+                                24 pt. Card Stock
+                              </option>
+                              <option value="Brown_Kraft_Stock">
+                                Brown Kraft Stock
+                              </option>
+                              <option value="White_Kraft_Stock">
+                                White Kraft Stock
+                              </option>
+                              <option value="Brown_Corrugated">
+                                Brown Corrugated
+                              </option>
+                              <option value="White_Corrugated">
+                                White Corrugated
+                              </option>
+                              <option value="Texture_Stock">
+                                Texture Stock
+                              </option>
+                              <option value="Linen_Stock">Linen Stock</option>
+                              <option value="Other">Other</option>
+                            </select>
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="finishingOption"
                             >
                               Finishing Option
                             </label>
-                            <input
+                            <select
                               id="finishingOption"
                               name="finishingOption"
-                              type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Finishing Option"
-                            />
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                              <option value="">Select Finishing Option</option>
+                              <option value="Matte_Finish">Matte Finish</option>
+                              <option value="Spot_UV">
+                                Spot UV (Matte Surface + Glossy)
+                              </option>
+                              <option value="Aqueous_Coating">
+                                Aqueous Coating
+                              </option>
+                              <option value="Semi_Gloss_Finish">
+                                Semi Gloss Finish
+                              </option>
+                              <option value="Gold_Foiling">
+                                Gold Foiling (Glossy or Matte Finish)
+                              </option>
+                              <option value="Silver_Foiling">
+                                Silver Foiling (Glossy or Matte Finish)
+                              </option>
+                              <option value="Holographic_Foiling">
+                                Holographic Foiling (Glossy or Matte Finish)
+                              </option>
+                              <option value="Others">Others</option>
+                            </select>
                           </div>
                         </div>
 
@@ -200,7 +282,7 @@ function SingleProduct() {
                         <div className="flex flex-wrap -mx-2">
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="quantity"
                             >
                               Required Quantity*
@@ -209,14 +291,14 @@ function SingleProduct() {
                               id="quantity"
                               name="quantity"
                               type="number"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Quantity"
                               required
                             />
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="fullName"
                             >
                               Full Name
@@ -225,13 +307,13 @@ function SingleProduct() {
                               id="fullName"
                               name="fullName"
                               type="text"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Full Name"
                             />
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="  text-white text-[12px] hidden mb-2"
+                              className="text-white text-[12px] hidden mb-2"
                               htmlFor="email"
                             >
                               Email Address*
@@ -240,7 +322,7 @@ function SingleProduct() {
                               id="email"
                               name="email"
                               type="email"
-                              className=" w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                               placeholder="Email Address"
                               required
                             />
@@ -250,7 +332,7 @@ function SingleProduct() {
                         {/* Fourth Row: Job Details (Full Width) */}
                         <div className="mb-6">
                           <label
-                            className="  text-white text-[12px] hidden mb-2"
+                            className="text-white text-[12px] hidden mb-2"
                             htmlFor="jobDetails"
                           >
                             Job Details
@@ -264,8 +346,9 @@ function SingleProduct() {
                           ></textarea>
                         </div>
 
-                        <div className="flex ">
+                        <div className="flex">
                           <Button
+                            type="submit"
                             style={{
                               background: "#FAC409",
                               color: "#000",
@@ -275,13 +358,6 @@ function SingleProduct() {
                           >
                             Get Price Quote
                           </Button>
-                          {/* <button
-
-                  type="submit"
-                  className="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 transition duration-300"
-                >
-                  Submit
-                </button> */}
                         </div>
                       </form>
                     </div>

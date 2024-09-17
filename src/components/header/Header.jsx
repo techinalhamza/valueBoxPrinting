@@ -6,11 +6,13 @@ import { CiUser } from "react-icons/ci";
 import Navbar from "./Navbar";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,6 +33,13 @@ function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleSearch = (e) => {
+    if (e.key === "Enter" && searchTerm.trim()) {
+      // Redirect to the shop page with the search term as a query parameter
+      navigate(`/shop?search=${searchTerm}`);
+    }
+  };
+
   return (
     <>
       <header className=" ">
@@ -47,8 +56,11 @@ function Header() {
             </div>
             <input
               type="search"
-              placeholder="search products...."
+              placeholder="Search products..."
               className="p-3 border-none outline-none w-full"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={handleSearch} // Trigger search on Enter key
             />
           </div>
           <div className="contact-details">
@@ -59,7 +71,7 @@ function Header() {
                 </div>
                 <div className="nav-num">
                   <p className="text-[12px] text-center text-[#7A869A]">
-                    Need Help?Call us
+                    Need Help? Call us
                   </p>
                   <p>(713) 893-4763</p>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import productdata from "../../components/Products";
 import listingBanner from "/listingBanner_.jpg";
 import Product from "../../components/product/Product";
@@ -9,30 +9,47 @@ function Listing() {
   const [filteredItems, setFilteredItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState("Filter By Category");
   const [isOpen, setIsOpen] = useState(false);
-  const { categoryName } = useParams(); // Get the category from URL
+  const { categoryName } = useParams();
+  const location = useLocation(); // Use location to get search params
   const navigate = useNavigate();
+  const query = new URLSearchParams(location.search); // Parse query parameters
+  const searchTerm = query.get("search") || ""; // Get search term from URL
 
-  // Filter products based on the category from the URL
+  // Filter products based on the category and search term
   useEffect(() => {
+    const searchTermLower = searchTerm.toLowerCase();
+
     if (categoryName) {
       const filteredCategory = products.find(
         (cat) =>
           cat.category.replace(/\s+/g, "-").toLowerCase() ===
           categoryName.replace(/\s+/g, "-").toLowerCase()
       );
-      setFilteredItems(filteredCategory ? filteredCategory.items : []);
+      if (filteredCategory) {
+        const filteredItemsByCategory = filteredCategory.items.filter(
+          (item) =>
+            item.name.toLowerCase().includes(searchTermLower) ||
+            item.description.toLowerCase().includes(searchTermLower)
+        );
+        setFilteredItems(filteredItemsByCategory);
+        setSelectedItem(filteredCategory.category);
+      } else {
+        setFilteredItems([]);
+      }
     } else {
       const allProducts = products.flatMap((category) => category.items);
-      setFilteredItems(allProducts);
+      const filteredItemsBySearch = allProducts.filter(
+        (item) =>
+          item.name.toLowerCase().includes(searchTermLower) ||
+          item.description.toLowerCase().includes(searchTermLower)
+      );
+      setFilteredItems(filteredItemsBySearch);
     }
-  }, [categoryName, products]);
+  }, [categoryName, products, searchTerm]);
 
-  // List of categories for the dropdown
   const catItems = products.map((val) => val.category);
 
-  // Handle category selection
   const handleItemClick = (item) => {
-    // Navigate to the selected category
     navigate(`/category/${item.replace(/\s+/g, "-").toLowerCase()}`);
     setSelectedItem(item);
     setIsOpen(false);
@@ -56,14 +73,14 @@ function Listing() {
       </div>
       <div className="main-container">
         <div className="listing-head border-b mt-8 pb-4">
-          <div className="listing-head-content flex justify-between items-center">
+          <div className="listing-head-content flex justify-between items-center sm:pl-3">
             <h3 className="capitalize font-bold">
               Showing results for{" "}
               <span className="text-Blue">{filteredItems.length}</span> products
             </h3>
-            <div className="relative inline-block">
+            <div className="relative inline-block sm:w-1/2">
               <button
-                className={`bg-Yellow transition-all hover:bg-yellow-500 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow-md ${
+                className={`bg-Yellow transition-all hover:bg-yellow-500 text-white font-semibold py-2 px-4 sm:px-[10px] border border-gray-400 rounded shadow-md ${
                   isOpen ? "rounded-b-none" : ""
                 }`}
                 onClick={() => setIsOpen(!isOpen)}
@@ -71,15 +88,15 @@ function Listing() {
                 {selectedItem || "Select an item"}
               </button>
               <div
-                className={`absolute bg-white border border-gray-400 rounded-b shadow-md w-full overflow-hidden transition-max-height duration-300 ease-in-out ${
-                  isOpen ? "max-h-min" : "max-h-0"
+                className={`absolute bg-white rounded-b shadow-md w-full overflow-hidden overflow-y-scroll transition-max-height duration-300 ease-in-out ${
+                  isOpen ? "max-h-60" : "max-h-0"
                 }`}
               >
                 <ul>
                   {catItems.map((item) => (
                     <li
                       key={item}
-                      className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
+                      className="py-2 px-4 hover:bg-gray-100 cursor-pointer text-xs font-semibold border-b border-[#f3f3f3] whitespace-nowrap"
                       onClick={() => handleItemClick(item)}
                     >
                       {item}
@@ -91,8 +108,16 @@ function Listing() {
           </div>
         </div>
 
-        {/* Pass filtered items to Product component */}
-        <Product items={filteredItems} />
+        {/* Conditionally render based on filteredItems */}
+        {filteredItems.length > 0 ? (
+          <Product items={filteredItems} />
+        ) : (
+          <div className="text-center py-10">
+            <p className="text-gray-600">
+              No products found for this category or search term.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
