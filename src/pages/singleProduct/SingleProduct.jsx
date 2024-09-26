@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./SingleProduct.css";
-import product from "/productsImages/Cosmetics & Beauty/Custom Eyelash Boxes.png";
 import { filledInputClasses, Rating } from "@mui/material";
 import { Button } from "@mui/material";
 import { FaAngleRight } from "react-icons/fa";
@@ -8,6 +7,9 @@ import productdata from "../../components/Products";
 import Slider from "react-slick";
 import { useParams } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import Product from "../../components/product/Product";
+import listingBanner from "/listingBanner_.jpg";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -22,12 +24,13 @@ function SingleProduct() {
   const [showInfo, setShowInfo] = useState(0);
   const [products, setProducts] = useState(productdata);
   const [selectedProduct, setSelectedProduct] = useState([]); // State to store the filtered product
-  const form = useRef();
+  const [relatedProducts, setRelatedProducts] = useState([]);
   const { name } = useParams();
   const popularItems = products
     .map((val) => val.items.filter((item) => item.popular === "true"))
     .flat(); // This flattens the array of arrays
 
+  // console.log(popularItems);
   useEffect(() => {
     const filteredProduct = products
       .map((product) =>
@@ -37,57 +40,93 @@ function SingleProduct() {
         )
       )
       .filter(Boolean); // Remove undefined values from the array
-
+    // console.log(filteredProduct.map((k) => k.name));
     setSelectedProduct(filteredProduct);
+
+    const filterCat =
+      filteredProduct.length > 0 ? filteredProduct[0].cat : null;
+
+    if (filterCat) {
+      const related = products
+        .map((val) =>
+          val.items.filter(
+            (val_) =>
+              val_.cat === filterCat && val_.name !== filteredProduct[0].name
+          )
+        )
+        .flat(); // Flatten to avoid arrays of arrays
+      setRelatedProducts(related);
+      console.log(relatedProducts);
+    }
+    // const filterCat = filteredProduct.map((cat) => cat.cat);
+    // console.log(filterCat);
+    // const related = products.map((val) =>
+    //   val.items.filter((val_) => val_.cat === filterCat)
+    // );
+    // console.log(related);
   }, [name, products]);
 
-  console.log(selectedProduct.map((val) => val.moreInfo));
-  var settings = {
-    dots: false,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: false,
+  // console.log(selectedProduct.map((val) => val.moreInfo));
+  const settings = {
+    dots: true,
+    slidesToShow: 4,
+    // slidesToScroll: 4, // Matching slidesToShow and slidesToScroll
+    arrows: true,
     autoplay: true,
-    autoplaySpeed: 1500,
-    infinite: true,
+    autoplaySpeed: 2000,
+    infinite: false, // Set to false to prevent duplicating for now
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          // slidesToScroll: 3, // Adjust scroll to match show
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
+          // slidesToScroll: 2, // Matching scroll with show
+          centerMode: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          // slidesToScroll: 1, // Matching scroll with show
           arrows: false,
         },
       },
     ],
   };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm("service_sutf7zt", "template_5jpdhhr", form.current, {
-        publicKey: "VIPi5dd6OnTH45TQV",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-    e.target.reset();
-  };
-
   return (
     <>
       <div className="singleProduct-container">
+        <div
+          className="contact-us-breadcrumb"
+          style={{
+            backgroundImage: `url(${listingBanner})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            // padding: window.innerWidth > 600 ? "6rem" : " 4rem 0",
+            marginTop: "",
+          }}
+        >
+          <div className="listing-overlay w-full h-full bg-[#0007] py-24 sm:py-16 ">
+            <h1 className="text-7xl sm:text-4xl text-center text-white ">
+              {name.replace(/-/g, " ")}
+            </h1>
+          </div>
+        </div>
         <div className="main-container">
           {selectedProduct.map((product) => {
             return (
               <>
-                <div className="product-content flex sm:flex-wrap gap-4  overflow-hidden overflow-y-auto drop-shadow-xl border-t  pt-8">
+                <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  overflow- overflow-y-auto drop-shadow-xl border-t  pt-8">
                   <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0">
                     <img
                       src={product.img}
@@ -111,12 +150,12 @@ function SingleProduct() {
                     <div className="short-desc my-4">{product.desc}</div>
 
                     <div className="inquiry-form">
-                      <form ref={form} onSubmit={sendEmail}>
+                      <form>
                         {/* First Row: Length, Width, Height */}
                         <div className="flex flex-wrap -mx-2">
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="length"
                             >
                               Length (inch)*
@@ -132,7 +171,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="width"
                             >
                               Width (inch)*
@@ -148,7 +187,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="height"
                             >
                               Height (inch)*
@@ -168,7 +207,7 @@ function SingleProduct() {
                         <div className="flex flex-wrap -mx-2">
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="stockOption"
                             >
                               Stock Option
@@ -199,7 +238,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="printOption"
                             >
                               Print Option
@@ -243,7 +282,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="finishingOption"
                             >
                               Finishing Option
@@ -282,7 +321,7 @@ function SingleProduct() {
                         <div className="flex flex-wrap -mx-2">
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="quantity"
                             >
                               Required Quantity*
@@ -298,7 +337,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="fullName"
                             >
                               Full Name
@@ -313,7 +352,7 @@ function SingleProduct() {
                           </div>
                           <div className="w-1/3 px-2 mb-4">
                             <label
-                              className="text-white text-[12px] hidden mb-2"
+                              className="text-black text-[12px]  mb-2"
                               htmlFor="email"
                             >
                               Email Address*
@@ -332,17 +371,17 @@ function SingleProduct() {
                         {/* Fourth Row: Job Details (Full Width) */}
                         <div className="mb-6">
                           <label
-                            className="text-white text-[12px] hidden mb-2"
+                            className="text-black text-[12px]  mb-2"
                             htmlFor="jobDetails"
                           >
-                            Job Details
+                            Details
                           </label>
                           <textarea
                             id="jobDetails"
                             name="jobDetails"
                             rows="10"
                             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Job Details"
+                            placeholder="Type Your Needs Here Details"
                           ></textarea>
                         </div>
 
@@ -362,7 +401,7 @@ function SingleProduct() {
                       </form>
                     </div>
                     <div className="category my-4">
-                      <b>Category:</b> box
+                      <b>Category:</b> {product.cat}
                     </div>
                     <div className="social flex">
                       <ul className="flex items-center gap-2">
@@ -399,14 +438,12 @@ function SingleProduct() {
                   </div>
                 </div>
                 <div className="product-desc-tabs my-16 bg-[#FEF8ED]">
-                  <div className="row w-full  border rounded-lg mt-12 py-12 px-8">
+                  <div className="row w-full  border rounded-lg mt-12 py-12 px-8 sm:px-0">
                     <div className="col px-4">
-                      <div className="info-tabs flex flex-wrap gap-8 mb-12">
+                      <div className="info-tabs flex flex-wrap gap-4 mb-12">
                         <div
                           className={`discription ${
-                            showInfo === 0
-                              ? "bg-Blue rounded-full px-4"
-                              : "border rounded-full px-4"
+                            showInfo === 0 ? "border-b-Blue " : "  "
                           }`}
                           onClick={() => setShowInfo(0)}
                         >
@@ -415,7 +452,7 @@ function SingleProduct() {
                               showInfo === 0 ? " " : "border border-red-50"
                             }`}
                             style={{
-                              color: showInfo === 0 ? "#fff" : "var(--blue)",
+                              color: showInfo === 0 ? "var(--blue)" : "#000",
                             }}
                           >
                             Description
@@ -423,31 +460,25 @@ function SingleProduct() {
                         </div>
                         <div
                           className={`additionl-description ${
-                            showInfo === 1
-                              ? "bg-Blue rounded-full px-4"
-                              : "border rounded-full px-4 "
+                            showInfo === 1 ? " " : ""
                           }`}
                           onClick={() => setShowInfo(1)}
                         >
                           <Button
                             style={{
-                              color: showInfo === 1 ? "#fff" : "var(--blue)",
+                              color: showInfo === 1 ? "var(--blue)" : "#000",
                             }}
                           >
                             More Info
                           </Button>
                         </div>
                         <div
-                          className={`vendor ${
-                            showInfo === 2
-                              ? "bg-Blue rounded-full px-4"
-                              : "border rounded-full px-4"
-                          }`}
+                          className={`vendor ${showInfo === 2 ? " " : ""}`}
                           onClick={() => setShowInfo(2)}
                         >
                           <Button
                             style={{
-                              color: showInfo === 2 ? "#fff" : "var(--blue)",
+                              color: showInfo === 2 ? "var(--blue)" : "#000",
                             }}
                           >
                             Tags
@@ -469,33 +500,43 @@ function SingleProduct() {
                               return (
                                 <table class="font-md">
                                   <tbody>
-                                    <tr class="stand-up">
-                                      <th>Size / Styles:</th>
-                                      <td>
+                                    <tr class="stand-up ">
+                                      <th className="text-left block ">
+                                        Size / Styles:
+                                      </th>
+                                      <td className="block mt-2 mb-4">
                                         <p>{productInfo.sizeStyles}</p>
                                       </td>
                                     </tr>
                                     <tr class="folded-wo-wheels">
-                                      <th>Specification:</th>
-                                      <td>
+                                      <th className="text-left block">
+                                        Specification:
+                                      </th>
+                                      <td className="block mt-2 mb-4">
                                         <p>{productInfo.specification}</p>
                                       </td>
                                     </tr>
                                     <tr class="folded-w-wheels">
-                                      <th>Colors:</th>
-                                      <td>
+                                      <th className="text-left block">
+                                        Colors:
+                                      </th>
+                                      <td className="block mt-2 mb-4">
                                         <p>{productInfo.colors}</p>
                                       </td>
                                     </tr>
                                     <tr class="door-pass-through">
-                                      <th>Finishing Options:</th>
-                                      <td>
+                                      <th className="text-left block">
+                                        Finishing Options:
+                                      </th>
+                                      <td className="block mt-2 mb-4">
                                         <p>{productInfo.finishingOptions}</p>
                                       </td>
                                     </tr>
                                     <tr class="frame">
-                                      <th>Production Time:</th>
-                                      <td>
+                                      <th className="text-left block">
+                                        Production Time:
+                                      </th>
+                                      <td className="block mt-2 mb-4">
                                         <p>{productInfo.productionTime}</p>
                                       </td>
                                     </tr>
@@ -522,56 +563,61 @@ function SingleProduct() {
               </>
             );
           })}
-          <div className="related-products ">
-            <div className="all-product-container ">
-              <Slider {...settings}>
-                {popularItems.map((val, index) => {
-                  return (
-                    <div
-                      key={val.id}
-                      className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4"
-                    >
+          <div className="related-products mb-16">
+            <div className="category-title-bar  bg-white flex justify-center items-center shadow-xl px-4 py-6 mb-12">
+              <h1 className="text-3xl text-center sm:text-[24px] font-heading font-normal">
+                Related Products
+              </h1>
+            </div>
+            <div className="all-product-container mt-8 pb-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
+              {/* <Slider {...settings}> */}
+              {relatedProducts.slice(0, 4).map((val_) => (
+                <Link
+                  to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
+                  key={val_.id}
+                >
+                  <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4 h-full">
+                    <div className="flex flex-col h-full">
                       <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg">
                         <img
-                          src={val.img}
-                          alt=""
+                          src={val_.img}
+                          alt={val_.name}
                           className="m-auto bg-[#94C9F5]"
                         />
                       </div>
-                      <div className="product-info ">
+                      <div className="flex-grow">
                         <h1 className="product-name font-bold my-4 text-xl xsm:text-[13px] xsm:mb-2">
-                          {val.name}
+                          {val_.name}
                         </h1>
-
                         <p className="text-[14px] font-light text-[#555] xsm:text-[12px]">
-                          {val.desc.length > 80
-                            ? val.desc.substr(0, 80) + "..."
-                            : val.desc}
+                          {val_.desc.length > 80
+                            ? `${val_.desc.slice(0, 80)}...`
+                            : val_.desc}
                         </p>
-                        <div className="product-btn flex items-center justify-between xsm:flex-wrap  gap-4 text-[#FAC409] mt-4">
-                          <Rating
-                            readOnly
-                            defaultValue={4}
-                            precision={0.5}
-                            style={{ fontSize: "18px" }}
-                          />
-                          <Button
-                            style={{
-                              background: "var(--btnblue)",
-                              color: "#fff",
-                              padding: "6px 20px",
-                              width:
-                                window.innerWidth > 560 ? "inherit" : "100%",
-                            }}
-                          >
-                            Buy Now
-                          </Button>
-                        </div>
+                      </div>
+                      <div className="product-btn mt-auto flex items-center justify-between xsm:flex-wrap gap-4 text-[#FAC409]">
+                        <Rating
+                          readOnly
+                          value={val_.rating || 4} // Ensure rating is dynamic
+                          precision={0.5}
+                          style={{ fontSize: "18px" }}
+                        />
+                        <Button
+                          sx={{
+                            backgroundColor: "var(--btnblue)",
+                            color: "#fff",
+                            padding: "6px 20px",
+                            width: { xs: "100%", sm: "inherit" }, // Responsive button size
+                          }}
+                        >
+                          Buy Now
+                        </Button>
                       </div>
                     </div>
-                  );
-                })}
-              </Slider>
+                  </div>
+                </Link>
+              ))}
+              {/* </Slider> */}
             </div>
           </div>
         </div>

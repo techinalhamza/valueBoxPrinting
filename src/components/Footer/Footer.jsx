@@ -78,26 +78,26 @@ function Footer() {
                 <div className="links">
                   <ul>
                     <li>
-                      <Link>
+                      <Link to="/delivery-info">
                         <TiArrowRight />
                         Delivery Information
                       </Link>
                     </li>
                     <li>
-                      <Link>
+                      <Link to="/privacy-policy">
                         <TiArrowRight />
                         Privacy Policy
                       </Link>
                     </li>
                     <li>
-                      <Link>
+                      <Link to="/term-conditions">
                         <TiArrowRight />
                         Terms & Conditions
                       </Link>
                     </li>
 
                     <li>
-                      <Link>
+                      <Link to="/support">
                         <TiArrowRight />
                         Support Center
                       </Link>

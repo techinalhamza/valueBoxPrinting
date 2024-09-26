@@ -11,6 +11,10 @@ import Contact from "./pages/ContactUs/Contact";
 import Listing from "./pages/listing/Listing";
 import Product from "./components/product/Product";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import DeliveryInfo from "./pages/delivery info/DeliveryInfo";
+import Privacy from "./pages/privacy-policy/Privacy";
+import TermConditions from "./pages/term&conditions/TermConditions";
+import Support from "./pages/Support center/Support";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +31,10 @@ function App() {
         <Route path="/singleProduct/:name" element={<SingleProduct />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/delivery-info" element={<DeliveryInfo />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/term-conditions" element={<TermConditions />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -11,7 +11,7 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 786px) {
   header {
-    padding-bottom: 10px;
+    padding: 0px 5px;
   }
   .nav-links {
     /* display: none !important; */
@@ -65,7 +65,7 @@
     font-size: 11px;
   }
   .logo img {
-    width: 10rem !important;
+    width: 4rem !important;
   }
   .main-container {
     /* padding: 0 10px !important; */
