@@ -73,7 +73,7 @@ function Listing() {
       </div>
       <div className="main-container">
         <div className="listing-head border-b mt-8 pb-4">
-          <div className="listing-head-content flex justify-between items-center sm:pl-3 ">
+          <div className="listing-head-content flex justify-between items-center sm:pl-3 sm:gap-6">
             <div className="sm:w-1/2">
               <h3 className="capitalize font-bold">
                 Showing results for{" "}
