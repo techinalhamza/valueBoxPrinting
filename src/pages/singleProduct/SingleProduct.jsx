@@ -324,7 +324,7 @@ function SingleProduct() {
                               className="text-black text-[12px]  mb-2"
                               htmlFor="quantity"
                             >
-                              Required Quantity*
+                              Quantity*
                             </label>
                             <input
                               id="quantity"
