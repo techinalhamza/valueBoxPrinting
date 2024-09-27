@@ -24,7 +24,7 @@ function Navbar({ navOpen }) {
 
   return (
     <>
-      <nav className="bg-white border-t mt-[4.4rem] py-4">
+      <nav className="bg-white mt-[4.4rem] py-4">
         <div className="main-container flex items-center justify-between">
           <div
             className={`nav-links ${

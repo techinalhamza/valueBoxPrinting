@@ -73,14 +73,17 @@ function Listing() {
       </div>
       <div className="main-container">
         <div className="listing-head border-b mt-8 pb-4">
-          <div className="listing-head-content flex justify-between items-center sm:pl-3">
-            <h3 className="capitalize font-bold">
-              Showing results for{" "}
-              <span className="text-Blue">{filteredItems.length}</span> products
-            </h3>
-            <div className="relative inline-block sm:w-1/2">
+          <div className="listing-head-content flex justify-between items-center sm:pl-3 ">
+            <div className="sm:w-1/2">
+              <h3 className="capitalize font-bold">
+                Showing results for{" "}
+                <span className="text-Blue">{filteredItems.length}</span>{" "}
+                products
+              </h3>
+            </div>
+            <div className="relative inline-block sm:w-2/3">
               <button
-                className={`bg-Yellow transition-all hover:bg-yellow-500 text-white font-semibold py-2 px-4 sm:px-[10px] border border-gray-400 rounded shadow-md ${
+                className={`bg-Yellow sm:w-[95%] transition-all hover:bg-yellow-500 text-white font-semibold py-2 px-4 sm:px-[10px] border border-gray-400 rounded shadow-md ${
                   isOpen ? "rounded-b-none" : ""
                 }`}
                 onClick={() => setIsOpen(!isOpen)}

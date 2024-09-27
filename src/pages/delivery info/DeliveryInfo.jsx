@@ -21,7 +21,7 @@ function DeliveryInfo() {
         </div>
       </div>
       <div className="main-container flex items-center justify-center min-h-screen">
-        <h1 className="text-7xl">COMING SOON</h1>
+        <h1 className="text-7xl text-center">COMING SOON</h1>
       </div>
     </div>
   );
