@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import firstSlide from "/firstSlider_.jpg";
+import firstSlide from "/firstSlider_jpg.jpg";
 import firstSlide__ from "/mobileFirstSlide.png";
-import secSlide from "/secSlider.png";
+import secSlide from "/secSlider.jpg";
 import secSlide__ from "/secSlider__.png.jpg";
-import thirdSlide from "/thirdSlider.png";
+import thirdSlide from "/thirdSlider.jpg";
 import thirdSlide__ from "/thirdSlider__.jpg";
 import sliderText from "/sliderText.png";
 import star from "/star.svg";
@@ -27,7 +27,7 @@ function HeroSlider({ scrollToInquery }) {
   return (
     <>
       <Slider {...settings}>
-        <div className="w-full h-[80vh] sm:h-[60vh]">
+        <div className="w-full h-[60vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
@@ -91,7 +91,7 @@ function HeroSlider({ scrollToInquery }) {
             </div>
           </div>
         </div>
-        <div className="w-full h-[80vh] sm:h-[60vh]">
+        <div className="w-full h-[60vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
@@ -155,7 +155,7 @@ function HeroSlider({ scrollToInquery }) {
             </div>
           </div>
         </div>
-        <div className="w-full h-[80vh] sm:h-[60vh]">
+        <div className="w-full h-[60vh] sm:h-[60vh]">
           <div
             style={{
               width: "100%",

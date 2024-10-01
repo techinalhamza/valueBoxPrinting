@@ -28,7 +28,7 @@ function ChooseUs() {
               </p>
             </div>
             <div
-              className="choose-card-container gap-4 mt-16"
+              className="choose-card-container gap-4 mt-8"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit , minmax(18rem , 1fr))",
@@ -36,7 +36,7 @@ function ChooseUs() {
               }}
             >
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
-                <img src={customeSize} alt="" className="w-24" />
+                <img src={customeSize} alt="" className="w-16" />
                 <h1 className="font-bold uppercase">Custome Size</h1>
                 <p className="text-xs font-normal ">
                   Take Control And Customize The Size You Need For Your Apparel
@@ -44,7 +44,7 @@ function ChooseUs() {
                 </p>
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
-                <img src={customMaterial} alt="" className="w-24" />
+                <img src={customMaterial} alt="" className="w-16" />
                 <h1 className="font-bold uppercase">CUSTOM MATERIALS</h1>
                 <p className="text-xs font-normal ">
                   Need A Specific Material To Communicate Your Look And Feel?
@@ -53,7 +53,7 @@ function ChooseUs() {
                 </p>
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
-                <img src={customPrint} alt="" className="w-24" />
+                <img src={customPrint} alt="" className="w-16" />
                 <h1 className="font-bold uppercase">CUSTOM PRINT</h1>
                 <p className="text-xs font-normal ">
                   Choose The Ideal Printing Method For Your Beauty Packaging And
@@ -61,7 +61,7 @@ function ChooseUs() {
                 </p>
               </div>
               <div className="choose-card flex items-center justify-center flex-col gap-2 text-center bg-white rounded-2xl px-8 py-4">
-                <img src={customFinish} alt="" className="w-24" />
+                <img src={customFinish} alt="" className="w-16" />
                 <h1 className="font-bold uppercase">CUSTOM FINISHES</h1>
                 <p className="text-xs font-normal ">
                   Embellish Your Clothing Box With Special Finishes To Create A
