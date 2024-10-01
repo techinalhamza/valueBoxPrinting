@@ -94,13 +94,11 @@ function CategouryCarousel() {
                   <img src={catImg2} alt="" />
                 </div>
                 <Link
-                  to={`/category/${"Software & Electronic Boxes"
+                  to={`/category/${"Software & Electronic"
                     .replace(/\s+/g, "-")
                     .toLowerCase()}`}
                 >
-                  <h1 className="w-40 text-center">
-                    Software & Electronic Boxes
-                  </h1>
+                  <h1 className="w-40 text-center">Software & Electronic</h1>
                 </Link>
 
                 <div className="category-name"></div>
@@ -127,11 +125,11 @@ function CategouryCarousel() {
                   <img src={catImg4} alt="" />
                 </div>
                 <Link
-                  to={`/category/${"Software & Electronic Boxes"
+                  to={`/category/${"display-packaging"
                     .replace(/\s+/g, "-")
                     .toLowerCase()}`}
                 >
-                  <h1 className="w-40 text-center">Window Boxes</h1>
+                  <h1 className="w-40 text-center">Display Packaging</h1>
                 </Link>
                 <div className="category-name"></div>
               </div>
@@ -157,11 +155,11 @@ function CategouryCarousel() {
                   <img src={catImg6} alt="" />
                 </div>
                 <Link
-                  to={`/category/${"Software & Electronic Boxes"
+                  to={`/category/${"retail-packaging-boxes"
                     .replace(/\s+/g, "-")
                     .toLowerCase()}`}
                 >
-                  <h1 className="w-40 text-center">Gable Boxes</h1>
+                  <h1 className="w-40 text-center">Retail Packaging Boxes</h1>
                 </Link>
                 <div className="category-name"></div>
               </div>

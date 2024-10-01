@@ -11,7 +11,7 @@ function OurExperts() {
   return (
     <>
       <div
-        className="expert-container py-12 -mt-[5rem]"
+        className="expert-container  -mt-[5rem]"
         style={{
           backgroundImage: `url(${fadeBanner})`,
           backgroundSize: "cover",

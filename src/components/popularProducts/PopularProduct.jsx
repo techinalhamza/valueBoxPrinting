@@ -14,7 +14,7 @@ function PopularProduct() {
     .map((val) => val.items.filter((item) => item.popular === "true"))
     .flat(); // This flattens the array of arrays
 
-  console.log(popularItems.map((val) => val.name));
+  // console.log(popularItems.map((val) => val.name));
 
   return (
     <>

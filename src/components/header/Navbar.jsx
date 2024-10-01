@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiDiscountPercentFill } from "react-icons/ri";
+import productdata from "../Products";
 
 function Navbar({ navOpen }) {
   const categories = [
@@ -11,21 +12,29 @@ function Navbar({ navOpen }) {
     "Software & Electronic",
     "Box By Style",
   ];
-
+  const [products, setProducts] = useState(productdata);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnterCat = () => {
     setIsDropdownOpen(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeaveCat = () => {
     setIsDropdownOpen(false);
+  };
+  const handleMouseEnterPro = () => {
+    setIsProductDropdownOpen(true);
+  };
+
+  const handleMouseLeavePro = () => {
+    setIsProductDropdownOpen(false);
   };
 
   return (
     <>
-      <nav className="bg-white mt-[4.4rem] py-4">
-        <div className="main-container flex items-center justify-between">
+      <nav className="bg-white mt-[4.4rem] py-4 relative z-50">
+        <div className="main-container flex items-center justify-between relative z-20">
           <div
             className={`nav-links ${
               navOpen ? "active" : "nav-links"
@@ -43,7 +52,11 @@ function Navbar({ navOpen }) {
                   Home
                 </NavLink>
               </li>
-              <li>
+              <li
+                className=""
+                onMouseEnter={handleMouseEnterPro}
+                onMouseLeave={handleMouseLeavePro}
+              >
                 <NavLink
                   exact="true"
                   to="/shop"
@@ -53,6 +66,41 @@ function Navbar({ navOpen }) {
                 >
                   Shop
                 </NavLink>
+                {isProductDropdownOpen && (
+                  <div className="absolute left-0 top-1/2 mt-2 bg-white shadow-lg border rounded w-full py-4 grid grid-cols-6 gap-6 z-10">
+                    {products.map((val, index) => {
+                      return (
+                        <div key={index} className="px-4">
+                          <h3 className="font-bold text-nowrap text-black mb-2">
+                            {val.category}
+                          </h3>
+                          {val.items.map((val_) => {
+                            return (
+                              <ul>
+                                <li className="my-3">
+                                  <NavLink
+                                    exact="true"
+                                    to={`/singleProduct/${val_.name.replace(
+                                      /\s+/g,
+                                      "-"
+                                    )}`}
+                                    className={({ isActive }) =>
+                                      isActive
+                                        ? "text-Blue font-bold"
+                                        : "text-black"
+                                    }
+                                  >
+                                    {val_.name}
+                                  </NavLink>
+                                </li>
+                              </ul>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </li>
               <li>
                 <NavLink
@@ -67,15 +115,15 @@ function Navbar({ navOpen }) {
               </li>
               <li
                 className="relative"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseEnter={handleMouseEnterCat}
+                onMouseLeave={handleMouseLeaveCat}
               >
                 <span className="cursor-pointer">Categories</span>
                 {isDropdownOpen && (
                   <ul
                     className="absolute left-0 top-2 mt-2 bg-white shadow-lg border rounded w-48 py-2 z-10"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={handleMouseEnterCat}
+                    onMouseLeave={handleMouseLeaveCat}
                   >
                     {categories.map((category, index) => (
                       <li key={index} className="px-4 py-2 hover:bg-gray-200">
@@ -123,3 +171,23 @@ function Navbar({ navOpen }) {
 }
 
 export default Navbar;
+// <div key={index} className="px-4">
+//   <h3 className="font-bold text-black mb-2">{category}</h3>
+//   <ul>
+//     {products.map((product, idx) => (
+//       <li key={idx} className="py-1">
+//         <NavLink
+//           exact="true"
+//           to={`/product/${product
+//             .replace(/\s+/g, "-")
+//             .toLowerCase()}`}
+//           className={({ isActive }) =>
+//             isActive ? "text-blue font-bold" : "text-black"
+//           }
+//         >
+//           {product}
+//         </NavLink>
+//       </li>
+//     ))}
+//   </ul>
+// </div>
