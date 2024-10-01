@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiDiscountPercentFill } from "react-icons/ri";
 import productdata from "../Products";
+import { FaAngleDown } from "react-icons/fa";
 
 function Navbar({ navOpen }) {
   const categories = [
@@ -15,6 +16,7 @@ function Navbar({ navOpen }) {
   const [products, setProducts] = useState(productdata);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleMouseEnterCat = () => {
     setIsDropdownOpen(true);
@@ -30,17 +32,22 @@ function Navbar({ navOpen }) {
   const handleMouseLeavePro = () => {
     setIsProductDropdownOpen(false);
   };
-
+  if (navOpen === true) {
+    // setCloseNav(true);
+  }
   return (
     <>
       <nav className="bg-white mt-[4.4rem] py-4 relative z-50">
         <div className="main-container flex items-center justify-between relative z-20">
           <div
             className={`nav-links ${
-              navOpen ? "active" : "nav-links"
-            } transition-all duration-500 ease-in-out`}
+              navOpen ? "active " : "nav-links"
+            } transition-all duration-500 ease-in-out `}
           >
-            <ul className="flex gap-4 uppercase text-[13px]">
+            <ul
+              className="flex mblnav gap-6 uppercase text-[13px]"
+              onClick={() => setCloseNav(true)}
+            >
               <li>
                 <NavLink
                   exact="true"
@@ -65,9 +72,18 @@ function Navbar({ navOpen }) {
                   }
                 >
                   Shop
+                  <FaAngleDown
+                    style={{
+                      display: windowWidth > 600 ? "inline" : "none",
+                      marginLeft: "5px",
+                      marginTop: "-3px",
+                      position: windowWidth > 600 ? "relative" : "absolute",
+                      right: "10px",
+                    }}
+                  />
                 </NavLink>
                 {isProductDropdownOpen && (
-                  <div className="absolute left-0 top-1/2 mt-2 bg-white shadow-lg border rounded w-full py-4 grid grid-cols-6 gap-6 z-10">
+                  <div className="absolute left-0 top-1/2 mt-2 bg-white shadow-lg border rounded w-full py-4 grid grid-cols-6 gap-6 z-10 sm:hidden">
                     {products.map((val, index) => {
                       return (
                         <div key={index} className="px-4">
@@ -117,13 +133,31 @@ function Navbar({ navOpen }) {
                 className="relative"
                 onMouseEnter={handleMouseEnterCat}
                 onMouseLeave={handleMouseLeaveCat}
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                <span className="cursor-pointer">Categories</span>
+                <span className="cursor-pointer">
+                  Categories{" "}
+                  <FaAngleDown
+                    style={{
+                      display: "inline",
+                      marginLeft: "5px",
+                      marginTop: "-3px",
+                      position: windowWidth > 600 ? "relative" : "absolute",
+                      right: "10px",
+                    }}
+                  />
+                </span>
+
                 {isDropdownOpen && (
                   <ul
-                    className="absolute left-0 top-2 mt-2 bg-white shadow-lg border rounded w-48 py-2 z-10"
+                    className={`absolute sm:relative  left-0 top-2 mt-2  sm:m-0 bg-white shadow-lg sm:shadow-none  border sm:border-none rounded w-48 sm:w-full py-2 z-10 transition-h duration-300 ease-in-out ${
+                      isDropdownOpen ? "h-max" : "h-0"
+                    }`}
                     onMouseEnter={handleMouseEnterCat}
                     onMouseLeave={handleMouseLeaveCat}
+                    // style={{
+                    //   height: isDropdownOpen ? "max-content" : "0",
+                    // }}
                   >
                     {categories.map((category, index) => (
                       <li key={index} className="px-4 py-2 hover:bg-gray-200">
