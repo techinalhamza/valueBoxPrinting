@@ -50,7 +50,7 @@ function HeroSlider({ scrollToInquery }) {
                     //   background: " linear-gradient(90deg, #ffffff, transparent)",
                   }
                 }
-                className=" slider-content  w-max sm:w-full p-8 sm:p-[10px] rounded-2xl"
+                className=" slider-content  w-max sm:w-full py-8 sm:p-[10px] rounded-2xl"
               >
                 <div className="flex items-center gap-2">
                   <span>
@@ -114,7 +114,7 @@ function HeroSlider({ scrollToInquery }) {
                     //   background: " linear-gradient(90deg, #ffffff, transparent)",
                   }
                 }
-                className=" slider-content  w-max sm:w-full p-8 sm:p-[10px] rounded-2xl"
+                className=" slider-content  w-max sm:w-full py-8 sm:p-[10px] rounded-2xl"
               >
                 <div className="flex items-center gap-2">
                   <span>
@@ -178,7 +178,7 @@ function HeroSlider({ scrollToInquery }) {
                     //   background: " linear-gradient(90deg, #ffffff, transparent)",
                   }
                 }
-                className=" slider-content  w-max sm:w-full p-8 sm:p-[10px] rounded-2xl"
+                className=" slider-content  w-max sm:w-full py-8 sm:p-[10px] rounded-2xl"
               >
                 <div className="flex items-center gap-2">
                   <span>
