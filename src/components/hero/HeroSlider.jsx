@@ -65,7 +65,7 @@ function HeroSlider({ scrollToInquery }) {
                     <i className="font-serif text-Yellow"> Printing </i>
                   </h1> */}
                   {/* <h1 className=" font-inter">The Art OF Perfect Printing</h1> */}
-                  <img src={sliderText} alt="" className="sm:w-80" />
+                  <img src={sliderText} alt="" className="sm:w-80 w-[45rem] " />
                 </div>
                 <p className="text-xs text-end text-white tracking-[1px]">
                   Explore,design and order enviromentally conscious packaging
@@ -129,7 +129,7 @@ function HeroSlider({ scrollToInquery }) {
                     <i className="font-serif text-Yellow"> Printing </i>
                   </h1> */}
                   {/* <h1 className=" font-inter">The Art OF Perfect Printing</h1> */}
-                  <img src={sliderText} alt="" className="sm:w-80" />
+                  <img src={sliderText} alt="" className="sm:w-80 w-[45rem]" />
                 </div>
                 <p className="text-xs text-end text-white tracking-[1px]">
                   Explore,design and order enviromentally conscious packaging
@@ -193,7 +193,7 @@ function HeroSlider({ scrollToInquery }) {
                     <i className="font-serif text-Yellow"> Printing </i>
                   </h1> */}
                   {/* <h1 className=" font-inter">The Art OF Perfect Printing</h1> */}
-                  <img src={sliderText} alt="" className="sm:w-80" />
+                  <img src={sliderText} alt="" className="sm:w-80 w-[45rem]" />
                 </div>
                 <p className="text-xs text-end text-white tracking-[1px]">
                   Explore,design and order enviromentally conscious packaging
