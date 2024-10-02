@@ -47,7 +47,7 @@ input::placeholder {
 }
 /* Change the size of the dots */
 .slick-dots li button::before {
-  font-size: 20px;
+  font-size: 14px;
 
   /* Adjust the size as needed */
 }

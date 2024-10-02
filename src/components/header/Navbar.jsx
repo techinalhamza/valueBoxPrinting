@@ -75,7 +75,7 @@ function Navbar({ navOpen }) {
                   <FaAngleDown
                     style={{
                       display: windowWidth > 600 ? "inline" : "none",
-                      marginLeft: "5px",
+                      marginLeft: "15px",
                       marginTop: "-3px",
                       position: windowWidth > 600 ? "relative" : "absolute",
                       right: "10px",
@@ -140,7 +140,7 @@ function Navbar({ navOpen }) {
                   <FaAngleDown
                     style={{
                       display: "inline",
-                      marginLeft: "5px",
+                      marginLeft: "15px",
                       marginTop: "-3px",
                       position: windowWidth > 600 ? "relative" : "absolute",
                       right: "10px",

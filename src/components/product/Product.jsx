@@ -19,7 +19,7 @@ function Product({ items }) {
               >
                 <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4 h-full">
                   <div className="flex flex-col h-full">
-                    <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg h-48 overflow-hidden">
+                    <div className="product-image-bx w-full border-[14px] border-[#94C9F5] rounded-lg h-48 sm:h-max overflow-hidden">
                       <img
                         src={val_.img}
                         alt={val_.name}
