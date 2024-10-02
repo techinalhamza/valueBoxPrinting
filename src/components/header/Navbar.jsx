@@ -83,7 +83,7 @@ function Navbar({ navOpen }) {
     />
   </NavLink>
   <div
-    className={`absolute left-0 top-1/2 mt-6 bg-white  rounded w-full m z-10 transition-all duration-300 ease-in-out overflow-hidden ${
+    className={`absolute left-0 top-1/2 mt-6 bg-white  rounded w-full m z-10 transition-all duration-300 ease-in-out overflow-hidden sm:hidden ${
       isProductDropdownOpen ? "max-h-96" : "max-h-0"
     }`}
     style={{ transitionProperty: "max-height", maxHeight: isProductDropdownOpen ? "600px" : "0px", }}
@@ -98,7 +98,7 @@ function Navbar({ navOpen }) {
             {val.items.map((val_) => {
               return (
                 <ul>
-                  <li className="my-3">
+                  <li className="my-3 hover:text-Blue">
                     <NavLink
                       exact="true"
                       to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
@@ -150,7 +150,7 @@ function Navbar({ navOpen }) {
   </span>
 
   <div
-    className={`absolute sm:relative left-0 top-2 mt-2 sm:m-0 bg-white rounded w-48 sm:w-full py-2 z-10 transition-all duration-300 ease-in-out overflow-hidden ${
+    className={`absolute sm:relative left-0 top-2 mt-2 sm:m-0 bg-white rounded w-48 sm:w-full py-2 sm:py-0 z-10 transition-all duration-300 ease-in-out overflow-hidden ${
       isDropdownOpen ? "max-h-96" : "max-h-0"
     }`}
     style={{ transitionProperty: "max-height", maxHeight: isDropdownOpen ? "400px" : "0px" }}
