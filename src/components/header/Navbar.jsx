@@ -103,7 +103,7 @@ function Navbar({ navOpen }) {
                       exact="true"
                       to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
                       className={({ isActive }) =>
-                        isActive ? "text-blue font-bold" : "text-black"
+                        isActive ? "text-blue font-bold" : "text-black hover:text-Blue"
                       }
                     >
                       {val_.name}
@@ -164,7 +164,7 @@ function Navbar({ navOpen }) {
             exact="true"
             to={`/category/${category.replace(/\s+/g, "-").toLowerCase()}`}
             className={({ isActive }) =>
-              isActive ? "text-blue font-bold" : "text-black"
+              isActive ? "text-blue font-bold" : "text-black hover:text-Blue"
             }
           >
             {category}
@@ -180,7 +180,7 @@ function Navbar({ navOpen }) {
                   exact="true"
                   to="/contact"
                   className={({ isActive }) =>
-                    isActive ? "text-Blue font-bold" : "text-black"
+                    isActive ? "text-Blue font-bold" : "text-black "
                   }
                 >
                   Contact us
