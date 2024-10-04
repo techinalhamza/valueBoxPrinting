@@ -88,9 +88,7 @@ function Testimonals() {
 
                           <blockquote className="flex-1 mt-8">
                             <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                              “You made it so simple. My new site is so much
-                              faster and easier to work with than my old site. I
-                              just choose the page, make the change.”
+                              “Value Box delivered high-quality packaging with vibrant prints. Fast turnaround and great customer service!.”
                             </p>
                           </blockquote>
                         </div>
@@ -161,9 +159,7 @@ function Testimonals() {
 
                           <blockquote className="flex-1 mt-8">
                             <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                              “Simply the best. Better than all the rest. I’d
-                              recommend this product to beginners and advanced
-                              users.”
+                              “Great experience! Value Box helped me choose the perfect packaging, and the prices were unbeatable.”
                             </p>
                           </blockquote>
                         </div>
@@ -234,9 +230,7 @@ function Testimonals() {
 
                           <blockquote className="flex-1 mt-8">
                             <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                              “I cannot believe that I have got a brand new
-                              landing page after getting Omega. It was super
-                              easy to edit and publish.”
+                              “Impressed with the custom die-cut boxes! Value Box's attention to detail is amazing.”
                             </p>
                           </blockquote>
                         </div>
