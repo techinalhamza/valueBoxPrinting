@@ -108,7 +108,7 @@ function HeroSlider({ scrollToInquery }) {
                     //   background: " linear-gradient(90deg, #ffffff, transparent)",
                   }
                 }
-                className=" slider-content  w-max sm:w-full py-8 sm:p-[10px] rounded-2xl"
+                className=" slider-content  w-1/2 sm:w-full py-8 sm:p-[10px] rounded-2xl"
               >
                 <div className="flex items-center gap-2">
                   <span>
@@ -149,7 +149,7 @@ function HeroSlider({ scrollToInquery }) {
             </div>
           </div>
         </div>
-        <div className="w-full h-[60vh] sm:h-[60vh]">
+        <div className="w-full h-[60%] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
