@@ -19,7 +19,7 @@ function HeroSlider({ scrollToInquery }) {
     slidesToScroll: 1,
     arrows: false,
     // centerMode: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     fade: true,
     adaptiveHeight: true,
