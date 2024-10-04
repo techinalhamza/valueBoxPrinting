@@ -43,7 +43,7 @@ input::placeholder {
 }
 .slick-prev::before,
 .slick-next::before {
-  color: #008cffd9;
+  color: var(--btnblue);
   font-size: 2rem;
 }
 /* Change the size of the dots */
