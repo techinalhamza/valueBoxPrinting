@@ -27,7 +27,7 @@ function HeroSlider({ scrollToInquery }) {
   return (
     <>
       <Slider {...settings}>
-        <div className="w-full h-[60vh] sm:h-[60vh]">
+        <div className="w-full h-[60%] sm:h-[60vh]">
           <div
             style={{
               width: "100%",
@@ -50,7 +50,7 @@ function HeroSlider({ scrollToInquery }) {
                     //   background: " linear-gradient(90deg, #ffffff, transparent)",
                   }
                 }
-                className=" slider-content  w-max sm:w-full py-8 sm:p-[10px] rounded-2xl"
+                className=" slider-content  w-1/2 sm:w-full py-8 sm:p-[10px] rounded-2xl"
               >
                 <div className="flex items-center gap-2">
                   <span>
@@ -59,12 +59,6 @@ function HeroSlider({ scrollToInquery }) {
                   <p className="text-white">#1 Printing Services</p>
                 </div>
                 <div className="slider-h1 mt-4 mb-6">
-                  {/* <h1 className="text-[4rem] font-bold text-Blue leading-[70px] sm:text-[2rem] sm:leading-[40px]">
-                    Experience the Art of <br />
-                    Perfect
-                    <i className="font-serif text-Yellow"> Printing </i>
-                  </h1> */}
-                  {/* <h1 className=" font-inter">The Art OF Perfect Printing</h1> */}
                   <img src={sliderText} alt="" className="sm:w-80 w-[45rem] " />
                 </div>
                 <p className="text-xs text-end text-white tracking-[1px]">
