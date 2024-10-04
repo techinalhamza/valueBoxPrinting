@@ -43,7 +43,7 @@ function Header() {
   return (
     <>
       <header className=" ">
-        <div className="main-container flex items-center justify-between  pt-1 pb-3 m-h-[80px]">
+        <div className="main-container flex items-center justify-between  pt-1 pb-3 sm:pb-1 m-h-[80px]">
           <div className="logo w-[20%}">
             <Link to="/">
               {" "}
