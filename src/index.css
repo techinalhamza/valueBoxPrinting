@@ -9,7 +9,8 @@
 }
 :root {
   --blue: #008cffd9;
-  --btnblue: #168ae9;
+  /* --btnblue: #168ae9; */
+  --btnblue: #204C91;
   --yellow: #f0a220;
 }
 body,
@@ -89,4 +90,5 @@ header {
   background: #fef8ed !important;
   /* border-bottom: 1px solid #ccc; */
   box-shadow: 0px -1px 1px 1px #000;
+  max-height: 80px;
 }
