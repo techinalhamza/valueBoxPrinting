@@ -44,11 +44,8 @@ function Navbar({ navOpen }) {
               navOpen ? "active " : "nav-links"
             } transition-all duration-500 ease-in-out `}
           >
-            <ul
-              className="flex mblnav gap-6 uppercase text-[13px]"
-              onClick={() => setCloseNav(true)}
-            >
-              <li>
+            <ul className="flex mblnav gap-6 uppercase text-[11px]">
+              {/* <li>
                 <NavLink
                   exact="true"
                   to="/"
@@ -58,124 +55,134 @@ function Navbar({ navOpen }) {
                 >
                   Home
                 </NavLink>
-              </li>
+              </li> */}
               <li
-  className=""
-  onMouseEnter={handleMouseEnterPro}
-  onMouseLeave={handleMouseLeavePro}
->
-  <NavLink
-    exact="true"
-    to="/shop"
-    className={({ isActive }) =>
-      isActive ? "text-blue font-bold" : "text-black"
-    }
-  >
-    Shop
-    <FaAngleDown
-      style={{
-        display: windowWidth > 600 ? "inline" : "none",
-        marginLeft: "15px",
-        marginTop: "-3px",
-        position: windowWidth > 600 ? "relative" : "absolute",
-        right: "10px",
-      }}
-    />
-  </NavLink>
-  <div
-    className={`absolute left-0 top-1/2 mt-6 bg-white  rounded w-full m z-10 transition-all duration-300 ease-in-out overflow-hidden sm:hidden ${
-      isProductDropdownOpen ? "max-h-96" : "max-h-0"
-    }`}
-    style={{ transitionProperty: "max-height", maxHeight: isProductDropdownOpen ? "600px" : "0px", }}
-  >
-    <div className="grid grid-cols-6 gap-6">
-      {products.map((val, index) => {
-        return (
-          <div key={index} className="px-4">
-            <h3 className="font-bold text-nowrap text-black mb-2">
-              {val.category}
-            </h3>
-            {val.items.map((val_) => {
-              return (
-                <ul>
-                  <li className="my-3 hover:text-Blue">
-                    <NavLink
-                      exact="true"
-                      to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
-                      className={({ isActive }) =>
-                        isActive ? "text-blue font-bold" : "text-black hover:text-Blue"
-                      }
-                    >
-                      {val_.name}
-                    </NavLink>
-                  </li>
-                </ul>
-              );
-            })}
-          </div>
-        );
-      })}
-    </div>
-  </div>
-</li>
-
-              <li>
+                className=""
+                onMouseEnter={handleMouseEnterPro}
+                onMouseLeave={handleMouseLeavePro}
+              >
                 <NavLink
                   exact="true"
-                  to="/about"
+                  to="/shop"
                   className={({ isActive }) =>
-                    isActive ? "text-Blue font-bold" : "text-black"
+                    isActive ? "text-blue font-bold" : "text-black"
                   }
                 >
-                  About us
+                  Products List
+                  <FaAngleDown
+                    style={{
+                      display: windowWidth > 600 ? "inline" : "none",
+                      marginLeft: "15px",
+                      marginTop: "-3px",
+                      position: windowWidth > 600 ? "relative" : "absolute",
+                      right: "10px",
+                    }}
+                  />
                 </NavLink>
+                <div
+                  className={`absolute left-0 top-1/2 mt-6 bg-white  rounded w-full m z-10 transition-all duration-300 ease-in-out overflow-hidden sm:hidden ${
+                    isProductDropdownOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                  style={{
+                    transitionProperty: "max-height",
+                    maxHeight: isProductDropdownOpen ? "600px" : "0px",
+                  }}
+                >
+                  <div className="grid grid-cols-6 gap-6">
+                    {products.map((val, index) => {
+                      return (
+                        <div key={index} className="px-4">
+                          <h3 className="font-bold text-nowrap text-black mb-2">
+                            {val.category}
+                          </h3>
+                          {val.items.map((val_) => {
+                            return (
+                              <ul>
+                                <li className="my-3 hover:text-Blue">
+                                  <NavLink
+                                    exact="true"
+                                    to={`/singleProduct/${val_.name.replace(
+                                      /\s+/g,
+                                      "-"
+                                    )}`}
+                                    className={({ isActive }) =>
+                                      isActive
+                                        ? "text-blue font-bold"
+                                        : "text-black hover:text-Blue"
+                                    }
+                                  >
+                                    {val_.name}
+                                  </NavLink>
+                                </li>
+                              </ul>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </li>
-              <li
-  className="relative"
-  onMouseEnter={handleMouseEnterCat}
-  onMouseLeave={handleMouseLeaveCat}
-  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
->
-  <span className="cursor-pointer">
-    Categories{" "}
-    <FaAngleDown
-      style={{
-        display: "inline",
-        marginLeft: "15px",
-        marginTop: "-3px",
-        position: windowWidth > 600 ? "relative" : "absolute",
-        right: "10px",
-      }}
-    />
-  </span>
 
-  <div
-    className={`absolute sm:relative left-0 top-2 mt-2 sm:m-0 bg-white rounded w-48 sm:w-full py-2 sm:py-0 z-10 transition-all duration-300 ease-in-out overflow-hidden ${
-      isDropdownOpen ? "max-h-96" : "max-h-0"
-    }`}
-    style={{ transitionProperty: "max-height", maxHeight: isDropdownOpen ? "400px" : "0px" }}
-    onMouseEnter={handleMouseEnterCat}
-    onMouseLeave={handleMouseLeaveCat}
-  >
-    <ul>
-      {categories.map((category, index) => (
-        <li key={index} className="px-4 py-2 hover:bg-gray-200">
-          <NavLink
-            exact="true"
-            to={`/category/${category.replace(/\s+/g, "-").toLowerCase()}`}
-            className={({ isActive }) =>
-              isActive ? "text-blue font-bold" : "text-black hover:text-Blue"
-            }
-          >
-            {category}
-          </NavLink>
-        </li>
-      ))}
-    </ul>
-  </div>
-</li>
+              <li>Quote By Style</li>
+              {/* categories menu link with dropdown  */}
+              {/* <li
+                className="relative"
+                onMouseEnter={handleMouseEnterCat}
+                onMouseLeave={handleMouseLeaveCat}
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                <span className="cursor-pointer">
+                  Categories{" "}
+                  <FaAngleDown
+                    style={{
+                      display: "inline",
+                      marginLeft: "15px",
+                      marginTop: "-3px",
+                      position: windowWidth > 600 ? "relative" : "absolute",
+                      right: "10px",
+                    }}
+                  />
+                </span>
 
-              <li>
+                <div
+                  className={`absolute sm:relative left-0 top-2 mt-2 sm:m-0 bg-white rounded w-48 sm:w-full py-2 sm:py-0 z-10 transition-all duration-300 ease-in-out overflow-hidden ${
+                    isDropdownOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                  style={{
+                    transitionProperty: "max-height",
+                    maxHeight: isDropdownOpen ? "400px" : "0px",
+                  }}
+                  onMouseEnter={handleMouseEnterCat}
+                  onMouseLeave={handleMouseLeaveCat}
+                >
+                  <ul>
+                    {categories.map((category, index) => (
+                      <li key={index} className="px-4 py-2 hover:bg-gray-200">
+                        <NavLink
+                          exact="true"
+                          to={`/category/${category
+                            .replace(/\s+/g, "-")
+                            .toLowerCase()}`}
+                          className={({ isActive }) =>
+                            isActive
+                              ? "text-blue font-bold"
+                              : "text-black hover:text-Blue"
+                          }
+                        >
+                          {category}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li> */}
+
+              <li>Upload Your Artwork</li>
+              <li>Free Design Services</li>
+              <li>Sample Request</li>
+              {/* contact page link  */}
+              {/* <li>
                 <NavLink
                   exact="true"
                   to="/contact"
@@ -185,7 +192,7 @@ function Navbar({ navOpen }) {
                 >
                   Contact us
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="nav-discount-tagline flex items-center">
