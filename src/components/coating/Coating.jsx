@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Coating.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import coating1 from "/coating1.png";
 import coatingData from "../Coating";
 
@@ -29,7 +29,7 @@ function Coating() {
     .filter((data) => data.category === options[activeIndex]) // Filter items based on selected category
     .map((data) => data.items)
     .flat(); // Flatten the array to access the items
-
+  // console.log(filteredItems);
   return (
     <>
       <div className="coating-container mt-8  bg-[#fef8ed]">
@@ -63,18 +63,20 @@ function Coating() {
             <div className="coating-cards-container py-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
               {/* Render filtered items here */}
               {filteredItems.map((item) => (
-                <div
+                <Link
+                  to={`/coatingProduct/${item.name.replace(/\s+/g, "-")}`}
                   key={item.id}
-                  className="coating-card flex flex-col gap-2 bg-white rounded-2xl overflow-hidden"
                 >
-                  <img src={item.img} alt={item.name} />
-                  <div className="coating-info p-4">
-                    <h1 className="font-bold mb-2 xsm:text-[13px]">
-                      {item.name}
-                    </h1>
-                    <p className="text-xs xsm:text-[12px]">{item.desc}</p>
+                  <div className="coating-card flex flex-col gap-2 bg-white rounded-2xl overflow-hidden">
+                    <img src={item.img} alt={item.name} />
+                    <div className="coating-info p-4">
+                      <h1 className="font-bold mb-2 xsm:text-[13px]">
+                        {item.name}
+                      </h1>
+                      <p className="text-xs xsm:text-[12px]">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
