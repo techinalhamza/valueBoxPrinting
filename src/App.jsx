@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import "../src/components/Responsive.css";
 import Header from "./components/header/Header";
@@ -16,11 +16,9 @@ import TermConditions from "./pages/term&conditions/TermConditions";
 import Support from "./pages/Support center/Support";
 import CoatingProduct from "./pages/singleProduct/CoatingProduct";
 
-
-
 function App() {
   const [count, setCount] = useState(0);
-
+ 
   return (
     <BrowserRouter>
       <Header />

@@ -71,6 +71,7 @@ function CoatingProduct() {
     } else {
       console.log("No matching product found for the name");
     }
+    window.scrollTo(0, 0);
   }, [name, products]);
 
   return (

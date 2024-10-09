@@ -61,6 +61,7 @@ function SingleProduct() {
     //   val.items.filter((val_) => val_.cat === filterCat)
     // );
     // console.log(related);
+    window.scrollTo(0, 0);
   }, [name, products]);
 
   // console.log(selectedProduct.map((val) => val.moreInfo));
