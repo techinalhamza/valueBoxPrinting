@@ -37,14 +37,14 @@ function Navbar({ navOpen }) {
   }
   return (
     <>
-      <nav className="bg-white mt-[4.4rem] py-4 relative z-50">
+      <nav className="bg-white mt-[4.4rem] pt-8 pb-4 relative z-50">
         <div className="main-container flex items-center justify-between relative z-20">
           <div
             className={`nav-links ${
               navOpen ? "active " : "nav-links"
             } transition-all duration-500 ease-in-out `}
           >
-            <ul className="flex mblnav gap-6 uppercase text-[11px]">
+            <ul className="flex mblnav gap-6 uppercase text-[14px]">
               {/* <li>
                 <NavLink
                   exact="true"
@@ -199,7 +199,7 @@ function Navbar({ navOpen }) {
             <span className="text-Yellow text-2xl mr-2">
               <RiDiscountPercentFill />
             </span>
-            <p className="text-[13px]">
+            <p className="text-[15px]">
               Get 10% off when you buy 2 custom products!
             </p>
           </div>

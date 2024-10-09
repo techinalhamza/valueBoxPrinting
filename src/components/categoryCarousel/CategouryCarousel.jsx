@@ -26,14 +26,14 @@ function CategouryCarousel() {
       {
         breakpoint: 1400, // For screens smaller than 1400px
         settings: {
-          slidesToShow: 4, // Show 4 slides
+          slidesToShow: 5, // Show 4 slides
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1200, // For screens smaller than 1200px
         settings: {
-          slidesToShow: 3, // Show 3 slides
+          slidesToShow: 4, // Show 3 slides
           slidesToScroll: 1,
         },
       },

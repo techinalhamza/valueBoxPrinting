@@ -14,7 +14,7 @@ function FaqAccording() {
         style={{ background: "linear-gradient(#D3E2EF,#F2E9D8)" }}
       >
         <div className="main-container">
-          <div className="Accordind-title-bar  bg-white text-center flex justify-center items-center shadow-xl px-4 py-6 mb-12 ">
+          <div className="Accordind-title-bar  bg-white text-center flex justify-center items-center shadow-xl px-4 py-6 mb-8 ">
             <h1 className="text-3xl font-heading font-normal text-center">
               Frequently Asked Questions (FAQs)
               {/* <i className=" text-Yellow"> Questions</i> */}
@@ -23,7 +23,7 @@ function FaqAccording() {
           <div>
             <Accordion
               style={{
-                padding: "1.2rem 1rem",
+                padding: "8px 1rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
               }}
@@ -47,7 +47,7 @@ function FaqAccording() {
             </Accordion>
             <Accordion
               style={{
-                padding: "1.2rem 1rem",
+                padding: "8px 1rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
               }}
@@ -69,7 +69,7 @@ function FaqAccording() {
             </Accordion>
             <Accordion
               style={{
-                padding: "1.2rem 1rem",
+                padding: "8px 1rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
               }}
@@ -96,7 +96,7 @@ function FaqAccording() {
             </Accordion>
             <Accordion
               style={{
-                padding: "1.2rem 1rem",
+                padding: "8px 1rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
               }}
@@ -124,7 +124,7 @@ function FaqAccording() {
             </Accordion>
             <Accordion
               style={{
-                padding: "1.2rem 1rem",
+                padding: "8px 1rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
               }}

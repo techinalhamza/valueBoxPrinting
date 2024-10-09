@@ -34,7 +34,7 @@ function OurExperts() {
                 </span>{" "}
                 <p className="text-white">#1 Printing Services</p>
               </div>
-              <h1 className="text-4xl sm:text-[2rem] text-white font-heading  tracking-wide my-6 leading-[3rem]">
+              <h1 className="text-4xl sm:text-[2rem] text-white font-heading  tracking-wide my-2 leading-[3rem]">
                 Not Sure What You Want ? Our Experts Can Help
               </h1>
               <div

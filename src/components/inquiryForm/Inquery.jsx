@@ -7,7 +7,7 @@ function Inquery() {
   return (
     <>
       <div
-        className="form-container py-12"
+        className="form-container py-4"
         style={{
           backgroundImage:
             window.innerWidth > 600
@@ -19,7 +19,7 @@ function Inquery() {
       >
         <div className="main-container">
           <div className="form-content w-[45%] sm:w-full px-4">
-            <h1 className="text-4xl text-white font-heading  tracking-wide mt-6 leading-[3rem]">
+            <h1 className="text-4xl text-white font-heading  tracking-wide mt- leading-[3rem]">
               Immediate Box Printing
             </h1>
             <p className="text-white">
@@ -27,7 +27,7 @@ function Inquery() {
               <span className="text-Yellow"> Immediate Box Printing </span>{" "}
               Need, We Can Typically Turn Your Quote Around In Minutes.
             </p>
-            <form className="mt-8 drop-shadow">
+            <form className="mt-4      drop-shadow">
               {/* First Row: Length, Width, Height */}
               <div className="flex flex-wrap -mx-2">
                 <div className=" w-1/3 px-2 mb-4">

@@ -14,10 +14,8 @@
   color: #fff;
   font-weight: bold;
   flex-shrink: 0;
-}
-.coating-container .coating-nav-links li:nth-child(1) {
-  color: #000;
-  /* text-decoration: underline; */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    transform 0.3s ease;
 }
 .coating-card img {
   width: 100%;
