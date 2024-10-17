@@ -184,7 +184,7 @@ function SingleProduct() {
                     />
                     <div className="price mt-4 text-2xl">10$</div>
                     <div className="short-desc my-4">{product.desc}</div>
-                    <hr className="mb-8" />
+                    <hr className="mb-4" />
                     <div className="inquiry-form">
                       <QuoteForm labelColor="black" />
                     </div>
@@ -225,7 +225,7 @@ function SingleProduct() {
                     </div> */}
                   </div>
                 </div>
-                <div className="product-desc-tabs my-16 bg-[#F6F6F6]">
+                <div className="product-desc-tabs my-8 bg-[#F6F6F6]">
                   <div className="row w-full  border rounded-lg mt-12 py-12 px-8 sm:px-0">
                     <div className="col px-4">
                       <div className="info-tabs flex flex-wrap gap-4 mb-12">
