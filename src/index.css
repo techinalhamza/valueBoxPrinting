@@ -10,7 +10,7 @@
 :root {
   --blue: #008cffd9;
   /* --btnblue: #168ae9; */
-  --btnblue: #204C91;
+  --btnblue: #204c91;
   --yellow: #f0a220;
 }
 body,
@@ -27,7 +27,6 @@ html {
 }
 textarea,
 input::placeholder {
-  font-size: 14px;
   color: #ccc;
 }
 

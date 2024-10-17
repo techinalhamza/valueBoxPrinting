@@ -1,0 +1,16 @@
+form label {
+  font-family: system-ui;
+  margin-bottom: 10px;
+}
+select,
+input {
+  margin-top: 8px;
+  border-radius: 4px;
+  height: 38px;
+  font-size: 12px !important;
+}
+
+textarea {
+  font-size: 12px !important;
+  padding: 10px !important;
+}

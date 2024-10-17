@@ -12,3 +12,93 @@
 .related-products .slick-slide {
   margin-right: 1rem;
 }
+
+.app {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.large-image-box {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Smooth transition for image change */
+}
+
+.large-image-box.left img {
+  transform: translateX(-100%); /* Slide left */
+}
+
+.large-image-box.right img {
+  transform: translateX(100%); /* Slide right */
+}
+
+/* Reset the position after the slide */
+.large-image-box.left img {
+  animation: slideInFromLeft 0.5s forwards;
+}
+
+.large-image-box.right img {
+  animation: slideInFromRight 0.5s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.small-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.small-image-box {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px solid #dbdbdb;
+}
+
+.small-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.small-image-box img:hover {
+  border: 2px solid var(--btnblue); /* Add border color on hover */
+}

@@ -98,7 +98,7 @@ function Navbar({ navOpen }) {
                           {val.items.map((val_) => {
                             return (
                               <ul>
-                                <li className="my-3 hover:text-Blue">
+                                <li className="my-3 hover:text-Button">
                                   <NavLink
                                     exact="true"
                                     to={`/singleProduct/${val_.name.replace(
@@ -107,8 +107,8 @@ function Navbar({ navOpen }) {
                                     )}`}
                                     className={({ isActive }) =>
                                       isActive
-                                        ? "text-blue font-bold"
-                                        : "text-black hover:text-Blue"
+                                        ? "text-Button font-bold"
+                                        : "text-black hover:text-Button hover:font-bold "
                                     }
                                   >
                                     {val_.name}
