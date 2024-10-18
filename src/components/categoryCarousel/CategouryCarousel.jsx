@@ -56,21 +56,25 @@ function CategouryCarousel() {
             <h1 className="text-3xl sm:text-[24px] font-heading font-normal">
               Shop By Category
             </h1>
-            <Button
-              style={{
-                background: "var(--btnblue)",
-                color: "#fff",
-                padding: "10px 20px",
-                textWrap: "nowrap",
-                fontSize: window.innerWidth > 600 ? "16px" : "10px",
-              }}
-              endIcon={
-                window.innerWidth > 600 ? <MdOutlineKeyboardArrowRight /> : null
-              }
-            >
-              {" "}
-              Shop All
-            </Button>
+            <Link to="/shop">
+              <Button
+                style={{
+                  background: "var(--btnblue)",
+                  color: "#fff",
+                  padding: "10px 20px",
+                  textWrap: "nowrap",
+                  fontSize: window.innerWidth > 600 ? "16px" : "10px",
+                }}
+                endIcon={
+                  window.innerWidth > 600 ? (
+                    <MdOutlineKeyboardArrowRight />
+                  ) : null
+                }
+              >
+                {" "}
+                Shop All
+              </Button>
+            </Link>
           </div>
           <Slider {...settings}>
             <div className="w-full ">
