@@ -42,7 +42,7 @@ function PopularProduct() {
             <ul className="flex items-center gap-4">
               <li
                 className={`text-base sm:text-[10px] text-nowrap font-bold text-[#555] ${
-                  activeIndex === 0 ? "text-Button" : ""
+                  activeIndex === 0 ? "text-[#204c91]" : ""
                 }`}
                 onClick={() => handleClick(0)}
               >
@@ -51,7 +51,7 @@ function PopularProduct() {
               <li>|</li>
               <li
                 className={`text-base sm:text-[10px] text-nowrap font-bold text-[#555] ${
-                  activeIndex === 1 ? "text-Button" : ""
+                  activeIndex === 1 ? "text-[#204c91]" : ""
                 }`}
                 onClick={() => handleClick(1)}
               >
@@ -60,7 +60,7 @@ function PopularProduct() {
               <li>|</li>
               <li
                 className={`text-base sm:text-[10px] text-nowrap font-bold text-[#555] ${
-                  activeIndex === 2 ? "text-Button" : ""
+                  activeIndex === 2 ? "text-[#204c91]" : ""
                 }`}
                 onClick={() => handleClick(2)}
               >

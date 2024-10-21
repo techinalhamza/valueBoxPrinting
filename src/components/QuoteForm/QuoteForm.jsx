@@ -11,7 +11,7 @@ function QuoteForm({ labelColor }) {
         <form>
           {/* First Row: Length, Width, Height */}
           <div className="flex flex-wrap -mx-2">
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className=" text-[12px]  mb-2"
                 htmlFor="length"
@@ -30,7 +30,7 @@ function QuoteForm({ labelColor }) {
                 required
               />
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="width"
@@ -49,7 +49,7 @@ function QuoteForm({ labelColor }) {
                 required
               />
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="height"
@@ -72,7 +72,7 @@ function QuoteForm({ labelColor }) {
 
           {/* Second Row: Stock Option, Print Option, Finishing Option */}
           <div className="flex flex-wrap -mx-2">
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="stockOption"
@@ -96,7 +96,7 @@ function QuoteForm({ labelColor }) {
                 <option value="PMS_Color_Printing">PMS Color Printing</option>
               </select>
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="printOption"
@@ -125,7 +125,7 @@ function QuoteForm({ labelColor }) {
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="finishingOption"
@@ -163,7 +163,7 @@ function QuoteForm({ labelColor }) {
 
           {/* Third Row: Quantity, Full Name, Email */}
           <div className="flex flex-wrap -mx-2">
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="quantity"
@@ -182,7 +182,7 @@ function QuoteForm({ labelColor }) {
                 required
               />
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="fullName"
@@ -201,7 +201,45 @@ function QuoteForm({ labelColor }) {
                 required
               />
             </div>
-            <div className="w-1/3 px-2 mb-4">
+            <div className="w-1/3 px-2 ">
+              <label
+                className="text-black text-[12px]  mb-2"
+                htmlFor="email"
+                style={{
+                  color: labelColor,
+                }}
+              >
+                Company Name
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                className="w-full px-2  border  focus:outline-none "
+                placeholder="company name"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-2">
+            <div className="w-1/2 px-2 ">
+              <label
+                className="text-black text-[12px]  mb-2"
+                htmlFor="fullName"
+                style={{
+                  color: labelColor,
+                }}
+              >
+                Phone Num
+              </label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="number"
+                className="w-full px-2  border  focus:outline-none "
+                placeholder="Phone Num"
+              />
+            </div>
+            <div className="w-1/2 px-2 ">
               <label
                 className="text-black text-[12px]  mb-2"
                 htmlFor="email"
