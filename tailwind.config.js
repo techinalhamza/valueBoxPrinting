@@ -30,6 +30,9 @@ export default {
         Button: "var(--btnblue)",
         Yellow: "var(--yellow)",
       },
+      letterSpacing: {
+        "1px": "1px",
+      },
     },
   },
   plugins: [],

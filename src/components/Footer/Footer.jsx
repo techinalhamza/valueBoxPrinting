@@ -28,9 +28,12 @@ function Footer() {
         <div className="main-container">
           <div className="footer-content ">
             <div className="row footer-data grid grid-cols-5 sm:grid-cols-2 sm:px-4">
-              <div className="footer-col mt-4 sm:col-span-2 ">
+              <div className="footer-col mt-4 sm:col-span-2  ">
                 <div className="img">
-                  <img src={logo} alt="" className="w-40" />
+                  {/* <img src={logo} alt="" className="w-40" /> */}
+                  <h1 className="text-white font-bold text-[22px]  font-heading tracking-1px">
+                    VALUE BOX PRINTING
+                  </h1>
                 </div>
                 <div className="company-info mt-4 ">
                   <p className="text-[#999999]">
