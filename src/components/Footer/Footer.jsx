@@ -31,7 +31,7 @@ function Footer() {
               <div className="footer-col mt-4 sm:col-span-2  ">
                 <div className="img">
                   {/* <img src={logo} alt="" className="w-40" /> */}
-                  <h1 className="text-white font-bold text-[22px]  font-heading tracking-1px">
+                  <h1 className=" font-bold text-[22px] text-[#fac405d1] font-heading tracking-1px">
                     VALUE BOX PRINTING
                   </h1>
                 </div>
