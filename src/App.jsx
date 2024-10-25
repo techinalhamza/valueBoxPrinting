@@ -14,6 +14,7 @@ import DeliveryInfo from "./pages/delivery info/DeliveryInfo";
 import Privacy from "./pages/privacy-policy/Privacy";
 import TermConditions from "./pages/term&conditions/TermConditions";
 import Support from "./pages/Support center/Support";
+import "../src/components/Responsive.css";
 
 function App() {
   return (

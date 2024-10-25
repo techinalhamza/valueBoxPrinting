@@ -25,10 +25,7 @@ html {
   width: 100%;
   margin: auto;
 }
-textarea,
-input::placeholder {
-  /* color: #ccc; */
-}
+
 
 .slick-arrow {
   position: absolute !important;
