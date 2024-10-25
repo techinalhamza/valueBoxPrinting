@@ -125,7 +125,7 @@ function CoatingProduct() {
                       <img
                         src={product.images[currentImageIndex]}
                         alt={`Product ${currentImageIndex + 1}`}
-                        className="w-full h-[635px] sm:h-auto drop-shadow"
+                        className="w-full h-[600px] sm:h-auto drop-shadow"
                       />
                     </div>
                     <div className="small-images">
