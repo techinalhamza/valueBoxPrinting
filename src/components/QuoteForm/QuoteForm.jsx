@@ -71,10 +71,10 @@ function QuoteForm({ labelColor }) {
           </div>
 
           {/* Second Row: Stock Option, Print Option, Finishing Option */}
-          <div className="flex flex-wrap -mx-2">
-            <div className="w-1/3 px-2 ">
+          <div className="flex flex-wrap -mx-2 sm:my-4 sm:gap-2">
+            <div className="w-1/3 sm:w-full px-2 ">
               <label
-                className="text-black text-[12px]  mb-2"
+                className="text-black text-[12px]  mb-2 sm:hidden"
                 htmlFor="stockOption"
                 style={{
                   color: labelColor,
@@ -96,9 +96,9 @@ function QuoteForm({ labelColor }) {
                 <option value="PMS_Color_Printing">PMS Color Printing</option>
               </select>
             </div>
-            <div className="w-1/3 px-2 ">
+            <div className="w-1/3 sm:w-full px-2 ">
               <label
-                className="text-black text-[12px]  mb-2"
+                className="text-black text-[12px] mb-2 sm:hidden"
                 htmlFor="printOption"
                 style={{
                   color: labelColor,
@@ -125,9 +125,9 @@ function QuoteForm({ labelColor }) {
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div className="w-1/3 px-2 ">
+            <div className="w-1/3 sm:w-full px-2 ">
               <label
-                className="text-black text-[12px]  mb-2"
+                className="text-black text-[12px] mb-2 sm:hidden"
                 htmlFor="finishingOption"
                 style={{
                   color: labelColor,
@@ -178,7 +178,7 @@ function QuoteForm({ labelColor }) {
                 name="quantity"
                 type="number"
                 className="w-full px-2  border  focus:outline-none "
-                placeholder="Quantity"
+                // placeholder="Quantity"
                 required
               />
             </div>
@@ -197,7 +197,7 @@ function QuoteForm({ labelColor }) {
                 name="fullName"
                 type="text"
                 className="w-full px-2  border  focus:outline-none "
-                placeholder="Full Name"
+                // placeholder="Full Name"
                 required
               />
             </div>
@@ -214,9 +214,9 @@ function QuoteForm({ labelColor }) {
               <input
                 id="email"
                 name="email"
-                type="email"
+                type="text"
                 className="w-full px-2  border  focus:outline-none "
-                placeholder="company name"
+                // placeholder="company name"
               />
             </div>
           </div>
@@ -236,7 +236,7 @@ function QuoteForm({ labelColor }) {
                 name="fullName"
                 type="number"
                 className="w-full px-2  border  focus:outline-none "
-                placeholder="Phone Num"
+                // placeholder="Phone Num"
               />
             </div>
             <div className="w-1/2 px-2 ">
@@ -254,7 +254,7 @@ function QuoteForm({ labelColor }) {
                 name="email"
                 type="email"
                 className="w-full px-2  border  focus:outline-none "
-                placeholder="Email Address"
+                // placeholder="Email Address"
                 required
               />
             </div>

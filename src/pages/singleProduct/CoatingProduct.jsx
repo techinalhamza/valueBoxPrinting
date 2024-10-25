@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import QuoteForm from "../../components/QuoteForm/QuoteForm";
 
 function CoatingProduct() {
   const [showInfo, setShowInfo] = useState(0);
@@ -23,6 +24,14 @@ function CoatingProduct() {
   const [selectedProduct, setSelectedProduct] = useState([]); // State to store the filtered product
   const [relatedProducts, setRelatedProducts] = useState([]);
   const { name } = useParams();
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Initial image index
+  const [direction, setDirection] = useState(""); // Track the transition direction
+
+  const handleImageClick = (index) => {
+    setDirection(index > currentImageIndex ? "right" : "left"); // Determine slide direction
+    setCurrentImageIndex(index); // Update the current image
+  };
 
   useEffect(() => {
     console.log("Products:", products); // Check the entire products array
@@ -97,17 +106,42 @@ function CoatingProduct() {
           {selectedProduct.map((product) => {
             return (
               <>
-                <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  overflow- overflow-y-auto drop-shadow-xl border-t  pt-8">
-                  <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0">
+                <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  border-t  pt-8">
+                  {/* <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0">
                     <img
                       src={product.img}
                       alt=""
                       className="w-full h-auto drop-shadow"
                     />
-                  </div>
+                  </div> */}
+                  <div className="product-image w-1/2 sm:w-full ">
+                    {/* <img
+                      src={productImages[currentIndex]}
+                      alt=""
+                      className="w-full h-auto drop-shadow"
+                    /> */}
 
+                    <div className="large-image bg-[#F6F6F6]">
+                      <img
+                        src={product.images[currentImageIndex]}
+                        alt={`Product ${currentImageIndex + 1}`}
+                        className="w-full h-[635px] sm:h-auto drop-shadow"
+                      />
+                    </div>
+                    <div className="small-images">
+                      {product.images.map((image, index) => (
+                        <div
+                          key={index}
+                          className="small-image-box"
+                          onClick={() => handleImageClick(index)}
+                        >
+                          <img src={image} alt={`Small product ${index + 1}`} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                   <div className="prodluct-info w-1/2 sm:w-full ">
-                    <div className="product-name text-4xl font-bold text-Button">
+                    <div className="product-name text-4xl sm:text-[2rem] font-bold text-Button">
                       {product.name}
                     </div>
                     <Rating
@@ -121,260 +155,12 @@ function CoatingProduct() {
                     <div className="short-desc my-4">{product.desc}</div>
 
                     <div className="inquiry-form">
-                      <form>
-                        {/* First Row: Length, Width, Height */}
-                        <div className="flex flex-wrap -mx-2">
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="length"
-                            >
-                              Length (inch)*
-                            </label>
-                            <input
-                              id="length"
-                              name="length"
-                              type="text"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Length"
-                              required
-                            />
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="width"
-                            >
-                              Width (inch)*
-                            </label>
-                            <input
-                              id="width"
-                              name="width"
-                              type="text"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Width"
-                              required
-                            />
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="height"
-                            >
-                              Height (inch)*
-                            </label>
-                            <input
-                              id="height"
-                              name="height"
-                              type="text"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Height"
-                              required
-                            />
-                          </div>
-                        </div>
-
-                        {/* Second Row: Stock Option, Print Option, Finishing Option */}
-                        <div className="flex flex-wrap -mx-2">
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="stockOption"
-                            >
-                              Stock Option
-                            </label>
-                            <select
-                              id="stockOption"
-                              name="stockOption"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            >
-                              <option value="">Select Print Option</option>
-                              <option value="Full_Color_Printing">
-                                Full Color Printing
-                              </option>
-                              <option value="1_Color_Printing">
-                                1 Color Printing
-                              </option>
-                              <option value="2_Color_Printing">
-                                2 Color Printing
-                              </option>
-                              <option value="3_Color_Printing">
-                                3 Color Printing
-                              </option>
-                              <option value="No_Printing">No Printing</option>
-                              <option value="PMS_Color_Printing">
-                                PMS Color Printing
-                              </option>
-                            </select>
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="printOption"
-                            >
-                              Print Option
-                            </label>
-                            <select
-                              id="printOption"
-                              name="printOption"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            >
-                              <option value="">Select Stock Option</option>
-                              <option value="14_pt_Card_Stock">
-                                14 pt. Card Stock
-                              </option>
-                              <option value="16_pt_Card_Stock">
-                                16 pt. Card Stock
-                              </option>
-                              <option value="18_pt_Card_Stock">
-                                18 pt. Card Stock
-                              </option>
-                              <option value="24_pt_Card_Stock">
-                                24 pt. Card Stock
-                              </option>
-                              <option value="Brown_Kraft_Stock">
-                                Brown Kraft Stock
-                              </option>
-                              <option value="White_Kraft_Stock">
-                                White Kraft Stock
-                              </option>
-                              <option value="Brown_Corrugated">
-                                Brown Corrugated
-                              </option>
-                              <option value="White_Corrugated">
-                                White Corrugated
-                              </option>
-                              <option value="Texture_Stock">
-                                Texture Stock
-                              </option>
-                              <option value="Linen_Stock">Linen Stock</option>
-                              <option value="Other">Other</option>
-                            </select>
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="finishingOption"
-                            >
-                              Finishing Option
-                            </label>
-                            <select
-                              id="finishingOption"
-                              name="finishingOption"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            >
-                              <option value="">Select Finishing Option</option>
-                              <option value="Matte_Finish">Matte Finish</option>
-                              <option value="Spot_UV">
-                                Spot UV (Matte Surface + Glossy)
-                              </option>
-                              <option value="Aqueous_Coating">
-                                Aqueous Coating
-                              </option>
-                              <option value="Semi_Gloss_Finish">
-                                Semi Gloss Finish
-                              </option>
-                              <option value="Gold_Foiling">
-                                Gold Foiling (Glossy or Matte Finish)
-                              </option>
-                              <option value="Silver_Foiling">
-                                Silver Foiling (Glossy or Matte Finish)
-                              </option>
-                              <option value="Holographic_Foiling">
-                                Holographic Foiling (Glossy or Matte Finish)
-                              </option>
-                              <option value="Others">Others</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        {/* Third Row: Quantity, Full Name, Email */}
-                        <div className="flex flex-wrap -mx-2">
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="quantity"
-                            >
-                              Quantity*
-                            </label>
-                            <input
-                              id="quantity"
-                              name="quantity"
-                              type="number"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Quantity"
-                              required
-                            />
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="fullName"
-                            >
-                              Full Name
-                            </label>
-                            <input
-                              id="fullName"
-                              name="fullName"
-                              type="text"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Full Name"
-                            />
-                          </div>
-                          <div className="w-1/3 px-2 mb-4">
-                            <label
-                              className="text-black text-[12px]  mb-2"
-                              htmlFor="email"
-                            >
-                              Email Address*
-                            </label>
-                            <input
-                              id="email"
-                              name="email"
-                              type="email"
-                              className="w-full px-3 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                              placeholder="Email Address"
-                              required
-                            />
-                          </div>
-                        </div>
-
-                        {/* Fourth Row: Job Details (Full Width) */}
-                        <div className="mb-6">
-                          <label
-                            className="text-black text-[12px]  mb-2"
-                            htmlFor="jobDetails"
-                          >
-                            Details
-                          </label>
-                          <textarea
-                            id="jobDetails"
-                            name="jobDetails"
-                            rows="10"
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Type Your Needs Here Details"
-                          ></textarea>
-                        </div>
-
-                        <div className="flex">
-                          <Button
-                            type="submit"
-                            style={{
-                              background: "#FAC409",
-                              color: "#000",
-                              padding: "6px 20px",
-                            }}
-                            endIcon={<FaAngleRight />}
-                          >
-                            Get Price Quote
-                          </Button>
-                        </div>
-                      </form>
+                      <QuoteForm />
                     </div>
-                    <div className="category my-4">
+                    {/* <div className="category my-4">
                       <b>Category:</b> {product.cat}
-                    </div>
-                    <div className="social flex">
+                    </div> */}
+                    {/* <div className="social flex">
                       <ul className="flex items-center gap-2">
                         <li>
                           <b>Follow us on:</b>
@@ -405,7 +191,7 @@ function CoatingProduct() {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/* <div className="product-desc-tabs my-16 bg-[#FEF8ED]">

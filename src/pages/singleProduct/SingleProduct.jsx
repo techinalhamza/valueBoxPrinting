@@ -143,8 +143,8 @@ function SingleProduct() {
             // console.log(product.images[0]);
             return (
               <>
-                <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  overflow- overflow-y-auto drop-shadow-xl border-t  pt-8">
-                  <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0 ">
+                <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  border-t  pt-8">
+                  <div className="product-image w-1/2 sm:w-full max-h-[35rem]   ">
                     {/* <img
                       src={productImages[currentIndex]}
                       alt=""

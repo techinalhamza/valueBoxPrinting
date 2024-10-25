@@ -27,7 +27,7 @@ html {
 }
 textarea,
 input::placeholder {
-  color: #ccc;
+  /* color: #ccc; */
 }
 
 .slick-arrow {
