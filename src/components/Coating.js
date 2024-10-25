@@ -129,6 +129,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
         ],
+        cat: "PRINTING OPTIONS",
       },
       {
         id: "2",
@@ -141,6 +142,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
         ],
+        cat: "PRINTING OPTIONS",
       },
       {
         id: "3",
@@ -153,6 +155,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
         ],
+        cat: "PRINTING OPTIONS",
       },
       {
         id: "4",
@@ -165,6 +168,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
         ],
+        cat: "PRINTING OPTIONS",
       },
     ],
   },
@@ -182,6 +186,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
         ],
+        cat: "Hot Foil Stamping",
       },
       {
         id: "2",
@@ -194,6 +199,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
         ],
+        cat: "Hot Foil Stamping",
       },
       {
         id: "3",
@@ -206,6 +212,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
         ],
+        cat: "Hot Foil Stamping",
       },
       {
         id: "4",
@@ -218,6 +225,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
         ],
+        cat: "Hot Foil Stamping",
       },
     ],
   },
@@ -235,6 +243,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
         ],
+        cat: "PAPERBOARD",
       },
       {
         id: "2",
@@ -247,6 +256,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
         ],
+        cat: "PAPERBOARD",
       },
       {
         id: "3",
@@ -259,6 +269,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
         ],
+        cat: "PAPERBOARD",
       },
       {
         id: "4",
@@ -271,6 +282,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
         ],
+        cat: "PAPERBOARD",
       },
     ],
   },
@@ -288,6 +300,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
         ],
+        cat: "CORRUGATED",
       },
       {
         id: "2",
@@ -300,6 +313,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
         ],
+        cat: "CORRUGATED",
       },
       {
         id: "3",
@@ -312,6 +326,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
         ],
+        cat: "CORRUGATED",
       },
       {
         id: "4",
@@ -324,6 +339,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
         ],
+        cat: "CORRUGATED",
       },
     ],
   },
@@ -341,6 +357,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
         ],
+        cat: "FLUTED GRADES",
       },
       {
         id: "2",
@@ -353,6 +370,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
         ],
+        cat: "FLUTED GRADES",
       },
       {
         id: "3",
@@ -365,6 +383,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
         ],
+        cat: "FLUTED GRADES",
       },
       {
         id: "4",
@@ -377,6 +396,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
         ],
+        cat: "FLUTED GRADES",
       },
     ],
   },
@@ -394,6 +414,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
         ],
+        cat: "RIGID MATERIALS",
       },
       {
         id: "2",
@@ -406,6 +427,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
         ],
+        cat: "RIGID MATERIALS",
       },
       {
         id: "3",
@@ -418,6 +440,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
         ],
+        cat: "RIGID MATERIALS",
       },
       {
         id: "4",
@@ -430,6 +453,7 @@ const coatingData = [
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
           "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
         ],
+        cat: "RIGID MATERIALS",
       },
     ],
   },

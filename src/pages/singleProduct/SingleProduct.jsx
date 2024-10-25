@@ -71,7 +71,8 @@ function SingleProduct() {
         )
         .flat(); // Flatten to avoid arrays of arrays
       setRelatedProducts(related);
-      console.log(relatedProducts);
+
+      // console.log("Related Products:", related);
     }
     // const filterCat = filteredProduct.map((cat) => cat.cat);
     // console.log(filterCat);
@@ -139,10 +140,10 @@ function SingleProduct() {
           </div>
         </div>
         <div className="main-container">
-          {selectedProduct.map((product) => {
+          {selectedProduct.map((product, index) => {
             // console.log(product.images[0]);
             return (
-              <>
+              <div key={index}>
                 <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  border-t  pt-8">
                   <div className="product-image w-1/2 sm:w-full max-h-[35rem]   ">
                     {/* <img
@@ -366,7 +367,7 @@ function SingleProduct() {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
           <div className="related-products mb-16">

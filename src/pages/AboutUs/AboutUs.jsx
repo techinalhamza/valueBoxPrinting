@@ -22,7 +22,9 @@ const AboutUs = () => {
         </div>
         <div className="main-container sm:px-4">
           <div className="about-us-header max-w-[70%] sm:max-w-[100%]   my-12 m-auto text-center w-full">
-            <h1 className="text-4xl font-bold mb-2 ">Value Box Printing</h1>
+            <h1 className="text-4xl font-bold mb-2 font-heading tracking-[2px]">
+              Value Box Printing
+            </h1>
             <p>
               Welcome to Value Box Printing! We specialize in providing
               top-quality box printing solutions for all your packaging needs.
@@ -43,7 +45,9 @@ const AboutUs = () => {
               />
             </div>
             <div className="brand-info flex flex-col justify-center ">
-              <h1 className="text-4xl font-bold mb-5">Some Words About us</h1>
+              <h1 className="text-4xl font-bold mb-5 font-heading tracking-[2px]">
+                Some Words About us
+              </h1>
               <p className="text-justify">
                 Value Box Printing is a dynamic company specializing in
                 packaging and printing services that are fast, convenient, and
@@ -81,7 +85,7 @@ const AboutUs = () => {
           >
             <div className="about-card border-4 border-grey-400 border-dashed flex  justify-between flex-col items-cente  gap-4 sm:gap-8  bg-white rounded-2xl px-8 py-8 ">
               {/* <h1 className="text-3xl  font-bold ">Our Mission</h1> */}
-              <h1 className="text-3xl  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
+              <h1 className="text-3xl font-heading tracking-[2px]  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
                 Our Mission
               </h1>
 
@@ -93,7 +97,7 @@ const AboutUs = () => {
             </div>
             <div className="about-card border-4 border-grey-400 border-dashed flex  justify-between flex-col items-cente  gap-4 sm:gap-8  bg-white rounded-2xl px-8 py-8 ">
               {/* <h1 className="text-3xl  font-bold ">Our Mission</h1> */}
-              <h1 className="text-3xl  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
+              <h1 className="text-3xl font-heading tracking-[2px]  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
                 Our Vision
               </h1>
 
@@ -105,7 +109,7 @@ const AboutUs = () => {
             </div>
             <div className="about-card border-4 border-grey-400 border-dashed flex  justify-between flex-col items-cente  gap-4 sm:gap-8  bg-white rounded-2xl px-8 py-8 ">
               {/* <h1 className="text-3xl  font-bold ">Our Mission</h1> */}
-              <h1 className="text-3xl  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
+              <h1 className="text-3xl font-heading tracking-[2px]  font-bold before:content-[''] before:absolute before:top-full relative  before:w-[40%] before:sm:w-[60%] before:h-1 before:rounded-md before:mt-2 before:bg-Yellow">
                 Our Values
               </h1>
 

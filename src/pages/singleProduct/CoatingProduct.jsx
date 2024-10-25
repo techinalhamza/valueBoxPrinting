@@ -24,7 +24,6 @@ function CoatingProduct() {
   const [selectedProduct, setSelectedProduct] = useState([]); // State to store the filtered product
   const [relatedProducts, setRelatedProducts] = useState([]);
   const { name } = useParams();
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Initial image index
   const [direction, setDirection] = useState(""); // Track the transition direction
 
@@ -34,8 +33,8 @@ function CoatingProduct() {
   };
 
   useEffect(() => {
-    console.log("Products:", products); // Check the entire products array
-    console.log("Name to filter by:", name); // The name we are filtering by
+    // console.log("Products:", products); // Check the entire products array
+    // console.log("Name to filter by:", name); // The name we are filtering by
 
     // Step 1: Filter the selected product based on the name
     const filteredProduct = products
@@ -46,7 +45,7 @@ function CoatingProduct() {
         )
       )
       .filter(Boolean); // Remove undefined values
-    console.log("Filtered Product:", filteredProduct); // Log the filtered product
+    // console.log("Filtered Product:", filteredProduct); // Log the filtered product
 
     if (filteredProduct.length > 0) {
       setSelectedProduct(filteredProduct); // Update selected product state
@@ -60,23 +59,37 @@ function CoatingProduct() {
         )
       )?.category;
 
-      console.log("Filter Category:", filterCategory); // Log the filter category
+      // console.log("Filter Category:", filterCategory); // Log the filter category
 
       if (filterCategory) {
-        // Step 3: Find related products based on the category
         const related = products
-          .filter((product) => product.category === filterCategory) // Filter by category
-          .flatMap((product) =>
-            product.items.filter(
-              (val_) => val_.name !== filteredProduct[0].name // Exclude the selected product
+          .map((val) =>
+            val.items.filter(
+              (val_) => val_.cat === filterCategory
+              // val_.cat === filterCategory &&
+              // val_.name !== filteredProduct[0].name
             )
-          );
-
-        console.log("Related Products:", related); // Log related products
-
-        // Step 4: Update the relatedProducts state
+          )
+          .flat(); // Flatten to avoid arrays of arrays
         setRelatedProducts(related);
+        // console.log("related product ", related);
       }
+
+      // if (filterCategory) {
+      //   // Step 3: Find related products based on the category
+      //   const related = products
+      //     .filter((product) => product.category === filterCategory) // Filter by category
+      //     .flatMap((product) =>
+      //       product.items.filter(
+      //         (val_) => val_.name !== filteredProduct[0].name // Exclude the selected product
+      //       )
+      //     );
+
+      //   console.log("Related Products:", related); // Log related products
+
+      //   // Step 4: Update the relatedProducts state
+      //   setRelatedProducts(related);
+      // }
     } else {
       console.log("No matching product found for the name");
     }
@@ -103,9 +116,9 @@ function CoatingProduct() {
           </div>
         </div>
         <div className="main-container">
-          {selectedProduct.map((product) => {
+          {selectedProduct.map((product, index) => {
             return (
-              <>
+              <div key={index}>
                 <div className="product-content sm:px-4 flex sm:flex-wrap gap-4  border-t  pt-8">
                   {/* <div className="product-image w-1/2 sm:w-full max-h-[35rem]  border sm:static sticky top-0">
                     <img
@@ -155,7 +168,7 @@ function CoatingProduct() {
                     <div className="short-desc my-4">{product.desc}</div>
 
                     <div className="inquiry-form">
-                      <QuoteForm />
+                      <QuoteForm labelColor="black" />
                     </div>
                     {/* <div className="category my-4">
                       <b>Category:</b> {product.cat}
@@ -317,7 +330,7 @@ function CoatingProduct() {
                     </div>
                   </div>
                 </div> */}
-              </>
+              </div>
             );
           })}
           <div className="related-products mb-16">
@@ -328,9 +341,9 @@ function CoatingProduct() {
             </div>
             <div className="all-product-container mt-8 pb-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
               {relatedProducts.length > 0 ? (
-                relatedProducts.map((val_) => (
+                relatedProducts.slice(0, 4).map((val_) => (
                   <Link
-                    to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
+                    to={`/coatingProduct/${val_.name.replace(/\s+/g, "-")}`}
                     key={val_.id}
                   >
                     <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4 h-full">

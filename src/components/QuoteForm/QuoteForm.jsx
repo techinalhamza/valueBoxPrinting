@@ -4,7 +4,6 @@ import { FaAngleRight } from "react-icons/fa";
 import "./QuoteForm.css";
 
 function QuoteForm({ labelColor }) {
-  console.log(labelColor);
   return (
     <>
       <div className="quote-form-container">

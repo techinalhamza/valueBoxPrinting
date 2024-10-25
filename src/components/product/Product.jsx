@@ -12,10 +12,10 @@ function Product({ items }) {
       <div className="main-container">
         <div className="product-main-container">
           <div className="all-product-container mt-8 pb-8 grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
-            {items.map((val_) => (
+            {items.map((val_, index) => (
               <Link
                 to={`/singleProduct/${val_.name.replace(/\s+/g, "-")}`}
-                key={val_.id}
+                key={index}
               >
                 <div className="product-card max-w-[18rem] w-full border border-[#e9e3e3] bg-white rounded-lg flex flex-col justify-between p-4 h-full">
                   <div className="flex flex-col h-full">

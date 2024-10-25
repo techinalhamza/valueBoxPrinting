@@ -95,9 +95,9 @@ function Navbar({ navOpen }) {
                           <h3 className="font-bold text-nowrap text-black mb-2">
                             {val.category}
                           </h3>
-                          {val.items.map((val_) => {
+                          {val.items.map((val_, index) => {
                             return (
-                              <ul>
+                              <ul key={index}>
                                 <li className="my-3 hover:text-Button">
                                   <NavLink
                                     exact="true"
